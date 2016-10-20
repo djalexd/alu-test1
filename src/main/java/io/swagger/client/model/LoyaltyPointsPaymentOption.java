@@ -1,4 +1,4 @@
-/*
+/**
  * Gecad ePayment API
  * Move your app forward with the Uber API
  *
@@ -30,12 +30,13 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+
 /**
  * Pay with loyalty points
  */
 @ApiModel(description = "Pay with loyalty points")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-20T17:53:39.583+02:00")
-public class LoyaltyPointsPaymentOption {
+
+public class LoyaltyPointsPaymentOption   {
   @SerializedName("amount")
   private Double amount = null;
 
@@ -95,6 +96,5 @@ public class LoyaltyPointsPaymentOption {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
 

@@ -1,4 +1,4 @@
-/*
+/**
  * Gecad ePayment API
  * Move your app forward with the Uber API
  *
@@ -34,12 +34,13 @@ import io.swagger.client.model.InstallmentsPaymentOption;
 import io.swagger.client.model.LoyaltyPointsPaymentOption;
 import io.swagger.client.model.TokenizedCardPaymentOption;
 
+
 /**
  * References all payment options available through ALU protocol
  */
 @ApiModel(description = "References all payment options available through ALU protocol")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-20T17:53:39.583+02:00")
-public class AluPaymentOption {
+
+public class AluPaymentOption   {
   @SerializedName("creditCard")
   private CardPaymentOption creditCard = null;
 
@@ -168,6 +169,5 @@ public class AluPaymentOption {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
 

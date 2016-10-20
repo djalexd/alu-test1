@@ -1,4 +1,4 @@
-/*
+/**
  * Gecad ePayment API
  * Move your app forward with the Uber API
  *
@@ -30,15 +30,16 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.client.model.WireAccountRaw;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import org.joda.time.DateTime;
+
 
 /**
  * AluResponseRaw
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-20T17:53:39.583+02:00")
-public class AluResponseRaw {
+
+public class AluResponseRaw   {
   @SerializedName("REFNO")
   private String REFNO = null;
 
@@ -138,7 +139,7 @@ public class AluResponseRaw {
   private String RETURN_MESSAGE = null;
 
   @SerializedName("DATE")
-  private DateTime DATE = null;
+  private OffsetDateTime DATE = null;
 
   @SerializedName("URL_3DS")
   private String uRL3DS = null;
@@ -269,7 +270,7 @@ public class AluResponseRaw {
     this.RETURN_MESSAGE = RETURN_MESSAGE;
   }
 
-  public AluResponseRaw DATE(DateTime DATE) {
+  public AluResponseRaw DATE(OffsetDateTime DATE) {
     this.DATE = DATE;
     return this;
   }
@@ -279,11 +280,11 @@ public class AluResponseRaw {
    * @return DATE
   **/
   @ApiModelProperty(example = "null", value = "Date of the response in UTC format")
-  public DateTime getDATE() {
+  public OffsetDateTime getDATE() {
     return DATE;
   }
 
-  public void setDATE(DateTime DATE) {
+  public void setDATE(OffsetDateTime DATE) {
     this.DATE = DATE;
   }
 
@@ -600,6 +601,5 @@ public class AluResponseRaw {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
 

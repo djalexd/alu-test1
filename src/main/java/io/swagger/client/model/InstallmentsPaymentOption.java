@@ -1,4 +1,4 @@
-/*
+/**
  * Gecad ePayment API
  * Move your app forward with the Uber API
  *
@@ -30,12 +30,13 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+
 /**
  * Pay with installments
  */
 @ApiModel(description = "Pay with installments")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-20T17:53:39.583+02:00")
-public class InstallmentsPaymentOption {
+
+public class InstallmentsPaymentOption   {
   @SerializedName("numberOfInstallments")
   private Integer numberOfInstallments = null;
 
@@ -165,6 +166,5 @@ public class InstallmentsPaymentOption {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
 

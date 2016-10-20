@@ -1,4 +1,4 @@
-/*
+/**
  * Gecad ePayment API
  * Move your app forward with the Uber API
  *
@@ -33,12 +33,13 @@ import io.swagger.client.model.WireAccount;
 import java.util.ArrayList;
 import java.util.List;
 
+
 /**
  * 2.0 model version for ALU entities
  */
 @ApiModel(description = "2.0 model version for ALU entities")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-20T17:53:39.583+02:00")
-public class AluResponse {
+
+public class AluResponse   {
   @SerializedName("refNum")
   private String refNum = null;
 
@@ -462,6 +463,5 @@ public class AluResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
 

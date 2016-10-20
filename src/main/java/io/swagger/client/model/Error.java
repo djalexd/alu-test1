@@ -1,4 +1,4 @@
-/*
+/**
  * Gecad ePayment API
  * Move your app forward with the Uber API
  *
@@ -30,11 +30,12 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+
 /**
  * Error
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-20T17:53:39.583+02:00")
-public class Error {
+
+public class Error   {
   @SerializedName("code")
   private Integer code = null;
 
@@ -140,6 +141,5 @@ public class Error {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
 

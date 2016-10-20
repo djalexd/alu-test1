@@ -1,4 +1,4 @@
-/*
+/**
  * Gecad ePayment API
  * Move your app forward with the Uber API
  *
@@ -30,11 +30,12 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+
 /**
  * DocumentId
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-20T17:53:39.583+02:00")
-public class DocumentId {
+
+public class DocumentId   {
   /**
    * Shopper's ID type - mandatory for UPT.  Accepted values:  * PERSONALID (identity card) * PASSPORT (passport) * DRVLICENSE (driving license) 
    */
@@ -142,6 +143,5 @@ public class DocumentId {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
 

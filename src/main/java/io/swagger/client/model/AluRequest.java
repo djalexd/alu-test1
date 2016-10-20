@@ -1,4 +1,4 @@
-/*
+/**
  * Gecad ePayment API
  * Move your app forward with the Uber API
  *
@@ -35,16 +35,17 @@ import io.swagger.client.model.Delivery;
 import io.swagger.client.model.Merchant;
 import io.swagger.client.model.OrderItem;
 import io.swagger.client.model.Shipping;
+import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import org.joda.time.DateTime;
+
 
 /**
  * 2.0 model version for ALU entities
  */
 @ApiModel(description = "2.0 model version for ALU entities")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-20T17:53:39.583+02:00")
-public class AluRequest {
+
+public class AluRequest   {
   @SerializedName("merchant")
   private Merchant merchant = null;
 
@@ -52,7 +53,7 @@ public class AluRequest {
   private String orderRef = null;
 
   @SerializedName("orderDate")
-  private DateTime orderDate = null;
+  private OffsetDateTime orderDate = null;
 
   @SerializedName("orderTimeout")
   private Integer orderTimeout = null;
@@ -169,7 +170,7 @@ public class AluRequest {
     this.orderRef = orderRef;
   }
 
-  public AluRequest orderDate(DateTime orderDate) {
+  public AluRequest orderDate(OffsetDateTime orderDate) {
     this.orderDate = orderDate;
     return this;
   }
@@ -179,11 +180,11 @@ public class AluRequest {
    * @return orderDate
   **/
   @ApiModelProperty(example = "null", value = "The date when the order is initiated in the system,  in YYYY-MM-DD HH:MM:SS format (e.g.: \"2012-05-01 21:15:45\") Important: Date should be UTC standard +/-10 minutes ")
-  public DateTime getOrderDate() {
+  public OffsetDateTime getOrderDate() {
     return orderDate;
   }
 
-  public void setOrderDate(DateTime orderDate) {
+  public void setOrderDate(OffsetDateTime orderDate) {
     this.orderDate = orderDate;
   }
 
@@ -474,6 +475,5 @@ public class AluRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
 

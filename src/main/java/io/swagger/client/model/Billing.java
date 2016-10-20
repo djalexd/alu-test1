@@ -1,4 +1,4 @@
-/*
+/**
  * Gecad ePayment API
  * Move your app forward with the Uber API
  *
@@ -33,12 +33,13 @@ import io.swagger.client.model.Address;
 import io.swagger.client.model.ContactPerson;
 import io.swagger.client.model.DocumentId;
 
+
 /**
  * Billing setup for ALU request
  */
 @ApiModel(description = "Billing setup for ALU request")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-20T17:53:39.583+02:00")
-public class Billing {
+
+public class Billing   {
   @SerializedName("contactPerson")
   private ContactPerson contactPerson = null;
 
@@ -167,6 +168,5 @@ public class Billing {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
 

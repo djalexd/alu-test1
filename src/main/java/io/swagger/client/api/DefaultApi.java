@@ -1,4 +1,4 @@
-/*
+/**
  * Gecad ePayment API
  * Move your app forward with the Uber API
  *
@@ -38,9 +38,9 @@ import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 
+import java.time.OffsetDateTime;
 import io.swagger.client.model.Error;
 import io.swagger.client.model.AluResponseRaw;
-import org.joda.time.DateTime;
 import java.math.BigDecimal;
 
 import java.lang.reflect.Type;
@@ -68,133 +68,133 @@ public class DefaultApi {
         this.apiClient = apiClient;
     }
 
-    /* Build call for orderAluV3Post */
-    private com.squareup.okhttp.Call orderAluV3PostCall(String MERCHANT, String ORDER_REF, DateTime ORDER_DATE, String BILL_LNAME, String BILL_FNAME, String BILL_EMAIL, String BILL_PHONE, String BILL_COUNTRYCODE, String BILL_CITYPE, String BILL_CINUMBER, String BILL_ADDRESS, String BILL_ZIPCODE, String BILL_CITY, String DELIVERY_LNAME, String DELIVERY_FNAME, String DELIVERY_PHONE, String DELIVERY_ADDRESS, String DELIVERY_ZIPCODE, String DELIVERY_CITY, String DELIVERY_STATE, String DELIVERY_COUNTRYCODE, String oRDERPNAME0, String oRDERPCODE0, BigDecimal oRDERPRICE0, Integer oRDERQTY0, String PAY_METHOD, String BACK_REF, String ORDER_HASH, String CC_NUMBER, String EXP_MONTH, String EXP_YEAR, String CC_CVV, String CC_OWNER, String CC_TOKEN, String oRDERPINFO0, String oRDERVER0, BigDecimal SELECTED_INSTALLMENTS_NUMBER, String CARD_PROGRAM_NAME, String ORDER_TIMEOUT, String USE_LOYALTY_POINTS, String LOYALTY_POINTS_AMOUNT, String CAMPAIGN_TYPE, String ORDER_SHIPPING, String POS_CODE, String BILL_FAX, String bILLADDRESS2, String BILL_STATE, String DELIVERY_EMAIL, String DELIVERY_COMPANY, String dELIVERYADDRESS2, String LU_ENABLE_TOKEN, String LU_TOKEN_TYPE, String CC_NUMBER_TIME, String CC_OWNER_TIME, String CLIENT_IP, String CLIENT_TIME, BigDecimal oRDERVAT0, String oRDERPRICETYPE0, String PRICES_CURRENCY, String oRDERPNAME1, String oRDERPCODE1, BigDecimal oRDERPRICE1, BigDecimal oRDERVAT1, String oRDERPRICETYPE1, Integer oRDERQTY1, String oRDERPNAME2, String oRDERPCODE2, BigDecimal oRDERPRICE2, BigDecimal oRDERVAT2, String oRDERPRICETYPE2, Integer oRDERQTY2, String oRDERPNAME3, String oRDERPCODE3, BigDecimal oRDERPRICE3, BigDecimal oRDERVAT3, String oRDERPRICETYPE3, Integer oRDERQTY3, String oRDERPNAME4, String oRDERPCODE4, BigDecimal oRDERPRICE4, BigDecimal oRDERVAT4, String oRDERPRICETYPE4, Integer oRDERQTY4, String oRDERPNAME5, String oRDERPCODE5, BigDecimal oRDERPRICE5, BigDecimal oRDERVAT5, String oRDERPRICETYPE5, Integer oRDERQTY5, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    /* Build call for createOrder */
+    private com.squareup.okhttp.Call createOrderCall(String MERCHANT, String ORDER_REF, OffsetDateTime ORDER_DATE, String PAY_METHOD, String BACK_REF, String ORDER_HASH, String BILL_LNAME, String BILL_FNAME, String BILL_EMAIL, String BILL_PHONE, String BILL_COUNTRYCODE, String BILL_CITYPE, String BILL_CINUMBER, String CC_NUMBER, String EXP_MONTH, String EXP_YEAR, String CC_CVV, String CC_OWNER, String CC_TOKEN, String oRDERPINFO0, String oRDERVER0, BigDecimal SELECTED_INSTALLMENTS_NUMBER, String CARD_PROGRAM_NAME, String ORDER_TIMEOUT, String USE_LOYALTY_POINTS, String LOYALTY_POINTS_AMOUNT, String CAMPAIGN_TYPE, String ORDER_SHIPPING, String POS_CODE, String BILL_FAX, String BILL_ADDRESS, String bILLADDRESS2, String BILL_ZIPCODE, String BILL_CITY, String BILL_STATE, String DELIVERY_LNAME, String DELIVERY_FNAME, String DELIVERY_EMAIL, String DELIVERY_PHONE, String DELIVERY_COMPANY, String DELIVERY_ADDRESS, String dELIVERYADDRESS2, String DELIVERY_ZIPCODE, String DELIVERY_CITY, String DELIVERY_STATE, String DELIVERY_COUNTRYCODE, String LU_ENABLE_TOKEN, String LU_TOKEN_TYPE, String CC_NUMBER_TIME, String CC_OWNER_TIME, String CLIENT_IP, String CLIENT_TIME, String oRDERPNAME0, String oRDERPCODE0, BigDecimal oRDERPRICE0, BigDecimal oRDERVAT0, String oRDERPRICETYPE0, Integer oRDERQTY0, String PRICES_CURRENCY, String oRDERPNAME1, String oRDERPCODE1, BigDecimal oRDERPRICE1, BigDecimal oRDERVAT1, String oRDERPRICETYPE1, Integer oRDERQTY1, String oRDERPNAME2, String oRDERPCODE2, BigDecimal oRDERPRICE2, BigDecimal oRDERVAT2, String oRDERPRICETYPE2, Integer oRDERQTY2, String oRDERPNAME3, String oRDERPCODE3, BigDecimal oRDERPRICE3, BigDecimal oRDERVAT3, String oRDERPRICETYPE3, Integer oRDERQTY3, String oRDERPNAME4, String oRDERPCODE4, BigDecimal oRDERPRICE4, BigDecimal oRDERVAT4, String oRDERPRICETYPE4, Integer oRDERQTY4, String oRDERPNAME5, String oRDERPCODE5, BigDecimal oRDERPRICE5, BigDecimal oRDERVAT5, String oRDERPRICETYPE5, Integer oRDERQTY5, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // verify the required parameter 'MERCHANT' is set
         if (MERCHANT == null) {
-            throw new ApiException("Missing the required parameter 'MERCHANT' when calling orderAluV3Post(Async)");
+            throw new ApiException("Missing the required parameter 'MERCHANT' when calling createOrder(Async)");
         }
         
         // verify the required parameter 'ORDER_REF' is set
         if (ORDER_REF == null) {
-            throw new ApiException("Missing the required parameter 'ORDER_REF' when calling orderAluV3Post(Async)");
+            throw new ApiException("Missing the required parameter 'ORDER_REF' when calling createOrder(Async)");
         }
         
         // verify the required parameter 'ORDER_DATE' is set
         if (ORDER_DATE == null) {
-            throw new ApiException("Missing the required parameter 'ORDER_DATE' when calling orderAluV3Post(Async)");
+            throw new ApiException("Missing the required parameter 'ORDER_DATE' when calling createOrder(Async)");
         }
         
         // verify the required parameter 'BILL_LNAME' is set
         if (BILL_LNAME == null) {
-            throw new ApiException("Missing the required parameter 'BILL_LNAME' when calling orderAluV3Post(Async)");
+            throw new ApiException("Missing the required parameter 'BILL_LNAME' when calling createOrder(Async)");
         }
         
         // verify the required parameter 'BILL_FNAME' is set
         if (BILL_FNAME == null) {
-            throw new ApiException("Missing the required parameter 'BILL_FNAME' when calling orderAluV3Post(Async)");
+            throw new ApiException("Missing the required parameter 'BILL_FNAME' when calling createOrder(Async)");
         }
         
         // verify the required parameter 'BILL_EMAIL' is set
         if (BILL_EMAIL == null) {
-            throw new ApiException("Missing the required parameter 'BILL_EMAIL' when calling orderAluV3Post(Async)");
+            throw new ApiException("Missing the required parameter 'BILL_EMAIL' when calling createOrder(Async)");
         }
         
         // verify the required parameter 'BILL_PHONE' is set
         if (BILL_PHONE == null) {
-            throw new ApiException("Missing the required parameter 'BILL_PHONE' when calling orderAluV3Post(Async)");
+            throw new ApiException("Missing the required parameter 'BILL_PHONE' when calling createOrder(Async)");
         }
         
         // verify the required parameter 'BILL_COUNTRYCODE' is set
         if (BILL_COUNTRYCODE == null) {
-            throw new ApiException("Missing the required parameter 'BILL_COUNTRYCODE' when calling orderAluV3Post(Async)");
+            throw new ApiException("Missing the required parameter 'BILL_COUNTRYCODE' when calling createOrder(Async)");
         }
         
         // verify the required parameter 'BILL_CITYPE' is set
         if (BILL_CITYPE == null) {
-            throw new ApiException("Missing the required parameter 'BILL_CITYPE' when calling orderAluV3Post(Async)");
+            throw new ApiException("Missing the required parameter 'BILL_CITYPE' when calling createOrder(Async)");
         }
         
         // verify the required parameter 'BILL_CINUMBER' is set
         if (BILL_CINUMBER == null) {
-            throw new ApiException("Missing the required parameter 'BILL_CINUMBER' when calling orderAluV3Post(Async)");
+            throw new ApiException("Missing the required parameter 'BILL_CINUMBER' when calling createOrder(Async)");
         }
         
         // verify the required parameter 'BILL_ADDRESS' is set
         if (BILL_ADDRESS == null) {
-            throw new ApiException("Missing the required parameter 'BILL_ADDRESS' when calling orderAluV3Post(Async)");
+            throw new ApiException("Missing the required parameter 'BILL_ADDRESS' when calling createOrder(Async)");
         }
         
         // verify the required parameter 'BILL_ZIPCODE' is set
         if (BILL_ZIPCODE == null) {
-            throw new ApiException("Missing the required parameter 'BILL_ZIPCODE' when calling orderAluV3Post(Async)");
+            throw new ApiException("Missing the required parameter 'BILL_ZIPCODE' when calling createOrder(Async)");
         }
         
         // verify the required parameter 'BILL_CITY' is set
         if (BILL_CITY == null) {
-            throw new ApiException("Missing the required parameter 'BILL_CITY' when calling orderAluV3Post(Async)");
+            throw new ApiException("Missing the required parameter 'BILL_CITY' when calling createOrder(Async)");
         }
         
         // verify the required parameter 'DELIVERY_LNAME' is set
         if (DELIVERY_LNAME == null) {
-            throw new ApiException("Missing the required parameter 'DELIVERY_LNAME' when calling orderAluV3Post(Async)");
+            throw new ApiException("Missing the required parameter 'DELIVERY_LNAME' when calling createOrder(Async)");
         }
         
         // verify the required parameter 'DELIVERY_FNAME' is set
         if (DELIVERY_FNAME == null) {
-            throw new ApiException("Missing the required parameter 'DELIVERY_FNAME' when calling orderAluV3Post(Async)");
+            throw new ApiException("Missing the required parameter 'DELIVERY_FNAME' when calling createOrder(Async)");
         }
         
         // verify the required parameter 'DELIVERY_PHONE' is set
         if (DELIVERY_PHONE == null) {
-            throw new ApiException("Missing the required parameter 'DELIVERY_PHONE' when calling orderAluV3Post(Async)");
+            throw new ApiException("Missing the required parameter 'DELIVERY_PHONE' when calling createOrder(Async)");
         }
         
         // verify the required parameter 'DELIVERY_ADDRESS' is set
         if (DELIVERY_ADDRESS == null) {
-            throw new ApiException("Missing the required parameter 'DELIVERY_ADDRESS' when calling orderAluV3Post(Async)");
+            throw new ApiException("Missing the required parameter 'DELIVERY_ADDRESS' when calling createOrder(Async)");
         }
         
         // verify the required parameter 'DELIVERY_ZIPCODE' is set
         if (DELIVERY_ZIPCODE == null) {
-            throw new ApiException("Missing the required parameter 'DELIVERY_ZIPCODE' when calling orderAluV3Post(Async)");
+            throw new ApiException("Missing the required parameter 'DELIVERY_ZIPCODE' when calling createOrder(Async)");
         }
         
         // verify the required parameter 'DELIVERY_CITY' is set
         if (DELIVERY_CITY == null) {
-            throw new ApiException("Missing the required parameter 'DELIVERY_CITY' when calling orderAluV3Post(Async)");
+            throw new ApiException("Missing the required parameter 'DELIVERY_CITY' when calling createOrder(Async)");
         }
         
         // verify the required parameter 'DELIVERY_STATE' is set
         if (DELIVERY_STATE == null) {
-            throw new ApiException("Missing the required parameter 'DELIVERY_STATE' when calling orderAluV3Post(Async)");
+            throw new ApiException("Missing the required parameter 'DELIVERY_STATE' when calling createOrder(Async)");
         }
         
         // verify the required parameter 'DELIVERY_COUNTRYCODE' is set
         if (DELIVERY_COUNTRYCODE == null) {
-            throw new ApiException("Missing the required parameter 'DELIVERY_COUNTRYCODE' when calling orderAluV3Post(Async)");
+            throw new ApiException("Missing the required parameter 'DELIVERY_COUNTRYCODE' when calling createOrder(Async)");
         }
         
         // verify the required parameter 'oRDERPNAME0' is set
         if (oRDERPNAME0 == null) {
-            throw new ApiException("Missing the required parameter 'oRDERPNAME0' when calling orderAluV3Post(Async)");
+            throw new ApiException("Missing the required parameter 'oRDERPNAME0' when calling createOrder(Async)");
         }
         
         // verify the required parameter 'oRDERPCODE0' is set
         if (oRDERPCODE0 == null) {
-            throw new ApiException("Missing the required parameter 'oRDERPCODE0' when calling orderAluV3Post(Async)");
+            throw new ApiException("Missing the required parameter 'oRDERPCODE0' when calling createOrder(Async)");
         }
         
         // verify the required parameter 'oRDERPRICE0' is set
         if (oRDERPRICE0 == null) {
-            throw new ApiException("Missing the required parameter 'oRDERPRICE0' when calling orderAluV3Post(Async)");
+            throw new ApiException("Missing the required parameter 'oRDERPRICE0' when calling createOrder(Async)");
         }
         
         // verify the required parameter 'oRDERQTY0' is set
         if (oRDERQTY0 == null) {
-            throw new ApiException("Missing the required parameter 'oRDERQTY0' when calling orderAluV3Post(Async)");
+            throw new ApiException("Missing the required parameter 'oRDERQTY0' when calling createOrder(Async)");
         }
         
 
@@ -419,6 +419,9 @@ public class DefaultApi {
      * @param MERCHANT The Merchant&#39;s ID, available in Control Panel  (Account Management / Account Settings)  (required)
      * @param ORDER_REF Order external reference number in Merchant&#39;s system  (required)
      * @param ORDER_DATE The date when the order is initiated in the system,  in YYYY-MM-DD HH:MM:SS format (e.g.: \&quot;2012-05-01 21:15:45\&quot;) Important: Date should be UTC standard +/-10 minutes  (required)
+     * @param PAY_METHOD Payment method for the order. Possible values: CCVISAMC -  Visa/Mastercard credit card (default), WIRE, UPT, BKM, QIWI,  PAYU_CREDIT, QBANK, COMPAY, TINKOFF_LOAN  (optional, default to CCVISAMC)
+     * @param BACK_REF Return URL on the Merchant webshop side that will be used in case  of 3DS enrolled cards authorizations or for Pay By Link (PBL)  payment methods (such as BKM, QIWI, PayU Credit, QBank, Compay, Tinkoff Loan).              (optional)
+     * @param ORDER_HASH HMAC_MD5 signature applied on all parameters from the request. Source string for HMAC_MD5 will be calculated by adding  the length of each field value at the beginning of field value.   A common key shared between PayU and the merchant is used  for the signature. Find more details on how is HASH generated here.  (optional)
      * @param BILL_LNAME Shopper&#39;s last name  (required)
      * @param BILL_FNAME Shopper&#39;s first name  (required)
      * @param BILL_EMAIL Email address of the Shopper (required)
@@ -426,24 +429,6 @@ public class DefaultApi {
      * @param BILL_COUNTRYCODE Shopper&#39;s country code in two letters, ISO format  (required)
      * @param BILL_CITYPE Shopper&#39;s ID type - mandatory for UPT. Accepted values:  * PERSONALID (identity card),  * PASSPORT (passport),  * DRVLICENSE (driving license)  (required)
      * @param BILL_CINUMBER Shopper&#39;s ID number (for the specified ID type)    (required)
-     * @param BILL_ADDRESS Shopper&#39;s address.  (required)
-     * @param BILL_ZIPCODE Address zip code.  (required)
-     * @param BILL_CITY City.  (required)
-     * @param DELIVERY_LNAME Last name of the person where the order will be delivered  (required)
-     * @param DELIVERY_FNAME First name of the person where the order will be delivered  (required)
-     * @param DELIVERY_PHONE The phone of the person of company where the order will be delivered.  (required)
-     * @param DELIVERY_ADDRESS Order delivery address.  (required)
-     * @param DELIVERY_ZIPCODE Order delivery address zip code.  (required)
-     * @param DELIVERY_CITY Order delivery city.  (required)
-     * @param DELIVERY_STATE Order delivery state.  (required)
-     * @param DELIVERY_COUNTRYCODE Delivery country code in two letters ISO format.  (required)
-     * @param oRDERPNAME0 Product name (required)
-     * @param oRDERPCODE0 Product code. If multiple products are sent (in the same or subsequent transactions) with the same product code, PayU will update the product with  the corresponding ORDER_PCODE[] (overwriting all the other product information - name, price, taxes).  (required)
-     * @param oRDERPRICE0 Unit price for product. Default currency is set by PRICES_CURRENCY, described below. (required)
-     * @param oRDERQTY0 Product quantity (required)
-     * @param PAY_METHOD Payment method for the order. Possible values: CCVISAMC -  Visa/Mastercard credit card (default), WIRE, UPT, BKM, QIWI,  PAYU_CREDIT, QBANK, COMPAY, TINKOFF_LOAN  (optional, default to CCVISAMC)
-     * @param BACK_REF Return URL on the Merchant webshop side that will be used in case  of 3DS enrolled cards authorizations or for Pay By Link (PBL)  payment methods (such as BKM, QIWI, PayU Credit, QBank, Compay, Tinkoff Loan).              (optional)
-     * @param ORDER_HASH HMAC_MD5 signature applied on all parameters from the request. Source string for HMAC_MD5 will be calculated by adding  the length of each field value at the beginning of field value.   A common key shared between PayU and the merchant is used  for the signature. Find more details on how is HASH generated here.  (optional)
      * @param CC_NUMBER The card number on which the order authorization will be made.  (optional)
      * @param EXP_MONTH The month in which the card used expires  (optional)
      * @param EXP_YEAR The year in which the card used expires  (optional)
@@ -461,19 +446,34 @@ public class DefaultApi {
      * @param ORDER_SHIPPING A positive number indicating the price of shipping.  The currency is set by PRICES_CURRENCY.  (optional)
      * @param POS_CODE Optional field used to define orders made through a specific POS.  Sent value should be previously confirmed with operation team.  (optional)
      * @param BILL_FAX Shopper&#39;s fax number.  (optional)
+     * @param BILL_ADDRESS Shopper&#39;s address.  (required)
      * @param bILLADDRESS2 Shopper&#39;s address (second line).  (optional)
+     * @param BILL_ZIPCODE Address zip code.  (required)
+     * @param BILL_CITY City.  (required)
      * @param BILL_STATE State / Dept.  (optional)
+     * @param DELIVERY_LNAME Last name of the person where the order will be delivered  (required)
+     * @param DELIVERY_FNAME First name of the person where the order will be delivered  (required)
      * @param DELIVERY_EMAIL Email address of the person or company where the order will be delivered  (optional)
+     * @param DELIVERY_PHONE The phone of the person of company where the order will be delivered.  (required)
      * @param DELIVERY_COMPANY Company name where the order will be delivered.  (optional)
+     * @param DELIVERY_ADDRESS Order delivery address.  (required)
      * @param dELIVERYADDRESS2 More details on order delivery address.  (optional)
+     * @param DELIVERY_ZIPCODE Order delivery address zip code.  (required)
+     * @param DELIVERY_CITY Order delivery city.  (required)
+     * @param DELIVERY_STATE Order delivery state.  (required)
+     * @param DELIVERY_COUNTRYCODE Delivery country code in two letters ISO format.  (required)
      * @param LU_ENABLE_TOKEN Enable Token payments for the order. For the initial transaction, we have this parameter set to 1  (optional)
      * @param LU_TOKEN_TYPE The type of the token. For the initial transaction, we have this parameter set to PAY_BY_CLICK  (optional)
      * @param CC_NUMBER_TIME Time spent by user to insert card number  (optional)
      * @param CC_OWNER_TIME Time spent by user to insert card owner  (optional)
      * @param CLIENT_IP IP address of the Shopper  (optional)
      * @param CLIENT_TIME Time collected from the Shopper&#39;s browser in YYYY-MM-DD hh:mm;ss format  (optional)
+     * @param oRDERPNAME0 Product name (required)
+     * @param oRDERPCODE0 Product code. If multiple products are sent (in the same or subsequent transactions) with the same product code, PayU will update the product with  the corresponding ORDER_PCODE[] (overwriting all the other product information - name, price, taxes).  (required)
+     * @param oRDERPRICE0 Unit price for product. Default currency is set by PRICES_CURRENCY, described below. (required)
      * @param oRDERVAT0 VAT value for product (optional)
      * @param oRDERPRICETYPE0 Specify if ORDER_PRICE[0] parameter includes VAT or not.  * GROSS (VAT is included)  * NET (VAT will be added by PayU)  (optional, default to NET)
+     * @param oRDERQTY0 Product quantity (required)
      * @param PRICES_CURRENCY The currency in which the prices are expressed, for example TRY If the parameter is not specified, the default value is the default currency of the Merchant.  (optional)
      * @param oRDERPNAME1 Product #2  (optional)
      * @param oRDERPCODE1 Product #2  (optional)
@@ -508,8 +508,8 @@ public class DefaultApi {
      * @return AluResponseRaw
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public AluResponseRaw orderAluV3Post(String MERCHANT, String ORDER_REF, DateTime ORDER_DATE, String BILL_LNAME, String BILL_FNAME, String BILL_EMAIL, String BILL_PHONE, String BILL_COUNTRYCODE, String BILL_CITYPE, String BILL_CINUMBER, String BILL_ADDRESS, String BILL_ZIPCODE, String BILL_CITY, String DELIVERY_LNAME, String DELIVERY_FNAME, String DELIVERY_PHONE, String DELIVERY_ADDRESS, String DELIVERY_ZIPCODE, String DELIVERY_CITY, String DELIVERY_STATE, String DELIVERY_COUNTRYCODE, String oRDERPNAME0, String oRDERPCODE0, BigDecimal oRDERPRICE0, Integer oRDERQTY0, String PAY_METHOD, String BACK_REF, String ORDER_HASH, String CC_NUMBER, String EXP_MONTH, String EXP_YEAR, String CC_CVV, String CC_OWNER, String CC_TOKEN, String oRDERPINFO0, String oRDERVER0, BigDecimal SELECTED_INSTALLMENTS_NUMBER, String CARD_PROGRAM_NAME, String ORDER_TIMEOUT, String USE_LOYALTY_POINTS, String LOYALTY_POINTS_AMOUNT, String CAMPAIGN_TYPE, String ORDER_SHIPPING, String POS_CODE, String BILL_FAX, String bILLADDRESS2, String BILL_STATE, String DELIVERY_EMAIL, String DELIVERY_COMPANY, String dELIVERYADDRESS2, String LU_ENABLE_TOKEN, String LU_TOKEN_TYPE, String CC_NUMBER_TIME, String CC_OWNER_TIME, String CLIENT_IP, String CLIENT_TIME, BigDecimal oRDERVAT0, String oRDERPRICETYPE0, String PRICES_CURRENCY, String oRDERPNAME1, String oRDERPCODE1, BigDecimal oRDERPRICE1, BigDecimal oRDERVAT1, String oRDERPRICETYPE1, Integer oRDERQTY1, String oRDERPNAME2, String oRDERPCODE2, BigDecimal oRDERPRICE2, BigDecimal oRDERVAT2, String oRDERPRICETYPE2, Integer oRDERQTY2, String oRDERPNAME3, String oRDERPCODE3, BigDecimal oRDERPRICE3, BigDecimal oRDERVAT3, String oRDERPRICETYPE3, Integer oRDERQTY3, String oRDERPNAME4, String oRDERPCODE4, BigDecimal oRDERPRICE4, BigDecimal oRDERVAT4, String oRDERPRICETYPE4, Integer oRDERQTY4, String oRDERPNAME5, String oRDERPCODE5, BigDecimal oRDERPRICE5, BigDecimal oRDERVAT5, String oRDERPRICETYPE5, Integer oRDERQTY5) throws ApiException {
-        ApiResponse<AluResponseRaw> resp = orderAluV3PostWithHttpInfo(MERCHANT, ORDER_REF, ORDER_DATE, BILL_LNAME, BILL_FNAME, BILL_EMAIL, BILL_PHONE, BILL_COUNTRYCODE, BILL_CITYPE, BILL_CINUMBER, BILL_ADDRESS, BILL_ZIPCODE, BILL_CITY, DELIVERY_LNAME, DELIVERY_FNAME, DELIVERY_PHONE, DELIVERY_ADDRESS, DELIVERY_ZIPCODE, DELIVERY_CITY, DELIVERY_STATE, DELIVERY_COUNTRYCODE, oRDERPNAME0, oRDERPCODE0, oRDERPRICE0, oRDERQTY0, PAY_METHOD, BACK_REF, ORDER_HASH, CC_NUMBER, EXP_MONTH, EXP_YEAR, CC_CVV, CC_OWNER, CC_TOKEN, oRDERPINFO0, oRDERVER0, SELECTED_INSTALLMENTS_NUMBER, CARD_PROGRAM_NAME, ORDER_TIMEOUT, USE_LOYALTY_POINTS, LOYALTY_POINTS_AMOUNT, CAMPAIGN_TYPE, ORDER_SHIPPING, POS_CODE, BILL_FAX, bILLADDRESS2, BILL_STATE, DELIVERY_EMAIL, DELIVERY_COMPANY, dELIVERYADDRESS2, LU_ENABLE_TOKEN, LU_TOKEN_TYPE, CC_NUMBER_TIME, CC_OWNER_TIME, CLIENT_IP, CLIENT_TIME, oRDERVAT0, oRDERPRICETYPE0, PRICES_CURRENCY, oRDERPNAME1, oRDERPCODE1, oRDERPRICE1, oRDERVAT1, oRDERPRICETYPE1, oRDERQTY1, oRDERPNAME2, oRDERPCODE2, oRDERPRICE2, oRDERVAT2, oRDERPRICETYPE2, oRDERQTY2, oRDERPNAME3, oRDERPCODE3, oRDERPRICE3, oRDERVAT3, oRDERPRICETYPE3, oRDERQTY3, oRDERPNAME4, oRDERPCODE4, oRDERPRICE4, oRDERVAT4, oRDERPRICETYPE4, oRDERQTY4, oRDERPNAME5, oRDERPCODE5, oRDERPRICE5, oRDERVAT5, oRDERPRICETYPE5, oRDERQTY5);
+    public AluResponseRaw createOrder(String MERCHANT, String ORDER_REF, OffsetDateTime ORDER_DATE, String PAY_METHOD, String BACK_REF, String ORDER_HASH, String BILL_LNAME, String BILL_FNAME, String BILL_EMAIL, String BILL_PHONE, String BILL_COUNTRYCODE, String BILL_CITYPE, String BILL_CINUMBER, String CC_NUMBER, String EXP_MONTH, String EXP_YEAR, String CC_CVV, String CC_OWNER, String CC_TOKEN, String oRDERPINFO0, String oRDERVER0, BigDecimal SELECTED_INSTALLMENTS_NUMBER, String CARD_PROGRAM_NAME, String ORDER_TIMEOUT, String USE_LOYALTY_POINTS, String LOYALTY_POINTS_AMOUNT, String CAMPAIGN_TYPE, String ORDER_SHIPPING, String POS_CODE, String BILL_FAX, String BILL_ADDRESS, String bILLADDRESS2, String BILL_ZIPCODE, String BILL_CITY, String BILL_STATE, String DELIVERY_LNAME, String DELIVERY_FNAME, String DELIVERY_EMAIL, String DELIVERY_PHONE, String DELIVERY_COMPANY, String DELIVERY_ADDRESS, String dELIVERYADDRESS2, String DELIVERY_ZIPCODE, String DELIVERY_CITY, String DELIVERY_STATE, String DELIVERY_COUNTRYCODE, String LU_ENABLE_TOKEN, String LU_TOKEN_TYPE, String CC_NUMBER_TIME, String CC_OWNER_TIME, String CLIENT_IP, String CLIENT_TIME, String oRDERPNAME0, String oRDERPCODE0, BigDecimal oRDERPRICE0, BigDecimal oRDERVAT0, String oRDERPRICETYPE0, Integer oRDERQTY0, String PRICES_CURRENCY, String oRDERPNAME1, String oRDERPCODE1, BigDecimal oRDERPRICE1, BigDecimal oRDERVAT1, String oRDERPRICETYPE1, Integer oRDERQTY1, String oRDERPNAME2, String oRDERPCODE2, BigDecimal oRDERPRICE2, BigDecimal oRDERVAT2, String oRDERPRICETYPE2, Integer oRDERQTY2, String oRDERPNAME3, String oRDERPCODE3, BigDecimal oRDERPRICE3, BigDecimal oRDERVAT3, String oRDERPRICETYPE3, Integer oRDERQTY3, String oRDERPNAME4, String oRDERPCODE4, BigDecimal oRDERPRICE4, BigDecimal oRDERVAT4, String oRDERPRICETYPE4, Integer oRDERQTY4, String oRDERPNAME5, String oRDERPCODE5, BigDecimal oRDERPRICE5, BigDecimal oRDERVAT5, String oRDERPRICETYPE5, Integer oRDERQTY5) throws ApiException {
+        ApiResponse<AluResponseRaw> resp = createOrderWithHttpInfo(MERCHANT, ORDER_REF, ORDER_DATE, PAY_METHOD, BACK_REF, ORDER_HASH, BILL_LNAME, BILL_FNAME, BILL_EMAIL, BILL_PHONE, BILL_COUNTRYCODE, BILL_CITYPE, BILL_CINUMBER, CC_NUMBER, EXP_MONTH, EXP_YEAR, CC_CVV, CC_OWNER, CC_TOKEN, oRDERPINFO0, oRDERVER0, SELECTED_INSTALLMENTS_NUMBER, CARD_PROGRAM_NAME, ORDER_TIMEOUT, USE_LOYALTY_POINTS, LOYALTY_POINTS_AMOUNT, CAMPAIGN_TYPE, ORDER_SHIPPING, POS_CODE, BILL_FAX, BILL_ADDRESS, bILLADDRESS2, BILL_ZIPCODE, BILL_CITY, BILL_STATE, DELIVERY_LNAME, DELIVERY_FNAME, DELIVERY_EMAIL, DELIVERY_PHONE, DELIVERY_COMPANY, DELIVERY_ADDRESS, dELIVERYADDRESS2, DELIVERY_ZIPCODE, DELIVERY_CITY, DELIVERY_STATE, DELIVERY_COUNTRYCODE, LU_ENABLE_TOKEN, LU_TOKEN_TYPE, CC_NUMBER_TIME, CC_OWNER_TIME, CLIENT_IP, CLIENT_TIME, oRDERPNAME0, oRDERPCODE0, oRDERPRICE0, oRDERVAT0, oRDERPRICETYPE0, oRDERQTY0, PRICES_CURRENCY, oRDERPNAME1, oRDERPCODE1, oRDERPRICE1, oRDERVAT1, oRDERPRICETYPE1, oRDERQTY1, oRDERPNAME2, oRDERPCODE2, oRDERPRICE2, oRDERVAT2, oRDERPRICETYPE2, oRDERQTY2, oRDERPNAME3, oRDERPCODE3, oRDERPRICE3, oRDERVAT3, oRDERPRICETYPE3, oRDERQTY3, oRDERPNAME4, oRDERPCODE4, oRDERPRICE4, oRDERVAT4, oRDERPRICETYPE4, oRDERQTY4, oRDERPNAME5, oRDERPCODE5, oRDERPRICE5, oRDERVAT5, oRDERPRICETYPE5, oRDERQTY5);
         return resp.getData();
     }
 
@@ -519,6 +519,9 @@ public class DefaultApi {
      * @param MERCHANT The Merchant&#39;s ID, available in Control Panel  (Account Management / Account Settings)  (required)
      * @param ORDER_REF Order external reference number in Merchant&#39;s system  (required)
      * @param ORDER_DATE The date when the order is initiated in the system,  in YYYY-MM-DD HH:MM:SS format (e.g.: \&quot;2012-05-01 21:15:45\&quot;) Important: Date should be UTC standard +/-10 minutes  (required)
+     * @param PAY_METHOD Payment method for the order. Possible values: CCVISAMC -  Visa/Mastercard credit card (default), WIRE, UPT, BKM, QIWI,  PAYU_CREDIT, QBANK, COMPAY, TINKOFF_LOAN  (optional, default to CCVISAMC)
+     * @param BACK_REF Return URL on the Merchant webshop side that will be used in case  of 3DS enrolled cards authorizations or for Pay By Link (PBL)  payment methods (such as BKM, QIWI, PayU Credit, QBank, Compay, Tinkoff Loan).              (optional)
+     * @param ORDER_HASH HMAC_MD5 signature applied on all parameters from the request. Source string for HMAC_MD5 will be calculated by adding  the length of each field value at the beginning of field value.   A common key shared between PayU and the merchant is used  for the signature. Find more details on how is HASH generated here.  (optional)
      * @param BILL_LNAME Shopper&#39;s last name  (required)
      * @param BILL_FNAME Shopper&#39;s first name  (required)
      * @param BILL_EMAIL Email address of the Shopper (required)
@@ -526,24 +529,6 @@ public class DefaultApi {
      * @param BILL_COUNTRYCODE Shopper&#39;s country code in two letters, ISO format  (required)
      * @param BILL_CITYPE Shopper&#39;s ID type - mandatory for UPT. Accepted values:  * PERSONALID (identity card),  * PASSPORT (passport),  * DRVLICENSE (driving license)  (required)
      * @param BILL_CINUMBER Shopper&#39;s ID number (for the specified ID type)    (required)
-     * @param BILL_ADDRESS Shopper&#39;s address.  (required)
-     * @param BILL_ZIPCODE Address zip code.  (required)
-     * @param BILL_CITY City.  (required)
-     * @param DELIVERY_LNAME Last name of the person where the order will be delivered  (required)
-     * @param DELIVERY_FNAME First name of the person where the order will be delivered  (required)
-     * @param DELIVERY_PHONE The phone of the person of company where the order will be delivered.  (required)
-     * @param DELIVERY_ADDRESS Order delivery address.  (required)
-     * @param DELIVERY_ZIPCODE Order delivery address zip code.  (required)
-     * @param DELIVERY_CITY Order delivery city.  (required)
-     * @param DELIVERY_STATE Order delivery state.  (required)
-     * @param DELIVERY_COUNTRYCODE Delivery country code in two letters ISO format.  (required)
-     * @param oRDERPNAME0 Product name (required)
-     * @param oRDERPCODE0 Product code. If multiple products are sent (in the same or subsequent transactions) with the same product code, PayU will update the product with  the corresponding ORDER_PCODE[] (overwriting all the other product information - name, price, taxes).  (required)
-     * @param oRDERPRICE0 Unit price for product. Default currency is set by PRICES_CURRENCY, described below. (required)
-     * @param oRDERQTY0 Product quantity (required)
-     * @param PAY_METHOD Payment method for the order. Possible values: CCVISAMC -  Visa/Mastercard credit card (default), WIRE, UPT, BKM, QIWI,  PAYU_CREDIT, QBANK, COMPAY, TINKOFF_LOAN  (optional, default to CCVISAMC)
-     * @param BACK_REF Return URL on the Merchant webshop side that will be used in case  of 3DS enrolled cards authorizations or for Pay By Link (PBL)  payment methods (such as BKM, QIWI, PayU Credit, QBank, Compay, Tinkoff Loan).              (optional)
-     * @param ORDER_HASH HMAC_MD5 signature applied on all parameters from the request. Source string for HMAC_MD5 will be calculated by adding  the length of each field value at the beginning of field value.   A common key shared between PayU and the merchant is used  for the signature. Find more details on how is HASH generated here.  (optional)
      * @param CC_NUMBER The card number on which the order authorization will be made.  (optional)
      * @param EXP_MONTH The month in which the card used expires  (optional)
      * @param EXP_YEAR The year in which the card used expires  (optional)
@@ -561,19 +546,34 @@ public class DefaultApi {
      * @param ORDER_SHIPPING A positive number indicating the price of shipping.  The currency is set by PRICES_CURRENCY.  (optional)
      * @param POS_CODE Optional field used to define orders made through a specific POS.  Sent value should be previously confirmed with operation team.  (optional)
      * @param BILL_FAX Shopper&#39;s fax number.  (optional)
+     * @param BILL_ADDRESS Shopper&#39;s address.  (required)
      * @param bILLADDRESS2 Shopper&#39;s address (second line).  (optional)
+     * @param BILL_ZIPCODE Address zip code.  (required)
+     * @param BILL_CITY City.  (required)
      * @param BILL_STATE State / Dept.  (optional)
+     * @param DELIVERY_LNAME Last name of the person where the order will be delivered  (required)
+     * @param DELIVERY_FNAME First name of the person where the order will be delivered  (required)
      * @param DELIVERY_EMAIL Email address of the person or company where the order will be delivered  (optional)
+     * @param DELIVERY_PHONE The phone of the person of company where the order will be delivered.  (required)
      * @param DELIVERY_COMPANY Company name where the order will be delivered.  (optional)
+     * @param DELIVERY_ADDRESS Order delivery address.  (required)
      * @param dELIVERYADDRESS2 More details on order delivery address.  (optional)
+     * @param DELIVERY_ZIPCODE Order delivery address zip code.  (required)
+     * @param DELIVERY_CITY Order delivery city.  (required)
+     * @param DELIVERY_STATE Order delivery state.  (required)
+     * @param DELIVERY_COUNTRYCODE Delivery country code in two letters ISO format.  (required)
      * @param LU_ENABLE_TOKEN Enable Token payments for the order. For the initial transaction, we have this parameter set to 1  (optional)
      * @param LU_TOKEN_TYPE The type of the token. For the initial transaction, we have this parameter set to PAY_BY_CLICK  (optional)
      * @param CC_NUMBER_TIME Time spent by user to insert card number  (optional)
      * @param CC_OWNER_TIME Time spent by user to insert card owner  (optional)
      * @param CLIENT_IP IP address of the Shopper  (optional)
      * @param CLIENT_TIME Time collected from the Shopper&#39;s browser in YYYY-MM-DD hh:mm;ss format  (optional)
+     * @param oRDERPNAME0 Product name (required)
+     * @param oRDERPCODE0 Product code. If multiple products are sent (in the same or subsequent transactions) with the same product code, PayU will update the product with  the corresponding ORDER_PCODE[] (overwriting all the other product information - name, price, taxes).  (required)
+     * @param oRDERPRICE0 Unit price for product. Default currency is set by PRICES_CURRENCY, described below. (required)
      * @param oRDERVAT0 VAT value for product (optional)
      * @param oRDERPRICETYPE0 Specify if ORDER_PRICE[0] parameter includes VAT or not.  * GROSS (VAT is included)  * NET (VAT will be added by PayU)  (optional, default to NET)
+     * @param oRDERQTY0 Product quantity (required)
      * @param PRICES_CURRENCY The currency in which the prices are expressed, for example TRY If the parameter is not specified, the default value is the default currency of the Merchant.  (optional)
      * @param oRDERPNAME1 Product #2  (optional)
      * @param oRDERPCODE1 Product #2  (optional)
@@ -608,8 +608,8 @@ public class DefaultApi {
      * @return ApiResponse&lt;AluResponseRaw&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<AluResponseRaw> orderAluV3PostWithHttpInfo(String MERCHANT, String ORDER_REF, DateTime ORDER_DATE, String BILL_LNAME, String BILL_FNAME, String BILL_EMAIL, String BILL_PHONE, String BILL_COUNTRYCODE, String BILL_CITYPE, String BILL_CINUMBER, String BILL_ADDRESS, String BILL_ZIPCODE, String BILL_CITY, String DELIVERY_LNAME, String DELIVERY_FNAME, String DELIVERY_PHONE, String DELIVERY_ADDRESS, String DELIVERY_ZIPCODE, String DELIVERY_CITY, String DELIVERY_STATE, String DELIVERY_COUNTRYCODE, String oRDERPNAME0, String oRDERPCODE0, BigDecimal oRDERPRICE0, Integer oRDERQTY0, String PAY_METHOD, String BACK_REF, String ORDER_HASH, String CC_NUMBER, String EXP_MONTH, String EXP_YEAR, String CC_CVV, String CC_OWNER, String CC_TOKEN, String oRDERPINFO0, String oRDERVER0, BigDecimal SELECTED_INSTALLMENTS_NUMBER, String CARD_PROGRAM_NAME, String ORDER_TIMEOUT, String USE_LOYALTY_POINTS, String LOYALTY_POINTS_AMOUNT, String CAMPAIGN_TYPE, String ORDER_SHIPPING, String POS_CODE, String BILL_FAX, String bILLADDRESS2, String BILL_STATE, String DELIVERY_EMAIL, String DELIVERY_COMPANY, String dELIVERYADDRESS2, String LU_ENABLE_TOKEN, String LU_TOKEN_TYPE, String CC_NUMBER_TIME, String CC_OWNER_TIME, String CLIENT_IP, String CLIENT_TIME, BigDecimal oRDERVAT0, String oRDERPRICETYPE0, String PRICES_CURRENCY, String oRDERPNAME1, String oRDERPCODE1, BigDecimal oRDERPRICE1, BigDecimal oRDERVAT1, String oRDERPRICETYPE1, Integer oRDERQTY1, String oRDERPNAME2, String oRDERPCODE2, BigDecimal oRDERPRICE2, BigDecimal oRDERVAT2, String oRDERPRICETYPE2, Integer oRDERQTY2, String oRDERPNAME3, String oRDERPCODE3, BigDecimal oRDERPRICE3, BigDecimal oRDERVAT3, String oRDERPRICETYPE3, Integer oRDERQTY3, String oRDERPNAME4, String oRDERPCODE4, BigDecimal oRDERPRICE4, BigDecimal oRDERVAT4, String oRDERPRICETYPE4, Integer oRDERQTY4, String oRDERPNAME5, String oRDERPCODE5, BigDecimal oRDERPRICE5, BigDecimal oRDERVAT5, String oRDERPRICETYPE5, Integer oRDERQTY5) throws ApiException {
-        com.squareup.okhttp.Call call = orderAluV3PostCall(MERCHANT, ORDER_REF, ORDER_DATE, BILL_LNAME, BILL_FNAME, BILL_EMAIL, BILL_PHONE, BILL_COUNTRYCODE, BILL_CITYPE, BILL_CINUMBER, BILL_ADDRESS, BILL_ZIPCODE, BILL_CITY, DELIVERY_LNAME, DELIVERY_FNAME, DELIVERY_PHONE, DELIVERY_ADDRESS, DELIVERY_ZIPCODE, DELIVERY_CITY, DELIVERY_STATE, DELIVERY_COUNTRYCODE, oRDERPNAME0, oRDERPCODE0, oRDERPRICE0, oRDERQTY0, PAY_METHOD, BACK_REF, ORDER_HASH, CC_NUMBER, EXP_MONTH, EXP_YEAR, CC_CVV, CC_OWNER, CC_TOKEN, oRDERPINFO0, oRDERVER0, SELECTED_INSTALLMENTS_NUMBER, CARD_PROGRAM_NAME, ORDER_TIMEOUT, USE_LOYALTY_POINTS, LOYALTY_POINTS_AMOUNT, CAMPAIGN_TYPE, ORDER_SHIPPING, POS_CODE, BILL_FAX, bILLADDRESS2, BILL_STATE, DELIVERY_EMAIL, DELIVERY_COMPANY, dELIVERYADDRESS2, LU_ENABLE_TOKEN, LU_TOKEN_TYPE, CC_NUMBER_TIME, CC_OWNER_TIME, CLIENT_IP, CLIENT_TIME, oRDERVAT0, oRDERPRICETYPE0, PRICES_CURRENCY, oRDERPNAME1, oRDERPCODE1, oRDERPRICE1, oRDERVAT1, oRDERPRICETYPE1, oRDERQTY1, oRDERPNAME2, oRDERPCODE2, oRDERPRICE2, oRDERVAT2, oRDERPRICETYPE2, oRDERQTY2, oRDERPNAME3, oRDERPCODE3, oRDERPRICE3, oRDERVAT3, oRDERPRICETYPE3, oRDERQTY3, oRDERPNAME4, oRDERPCODE4, oRDERPRICE4, oRDERVAT4, oRDERPRICETYPE4, oRDERQTY4, oRDERPNAME5, oRDERPCODE5, oRDERPRICE5, oRDERVAT5, oRDERPRICETYPE5, oRDERQTY5, null, null);
+    public ApiResponse<AluResponseRaw> createOrderWithHttpInfo(String MERCHANT, String ORDER_REF, OffsetDateTime ORDER_DATE, String PAY_METHOD, String BACK_REF, String ORDER_HASH, String BILL_LNAME, String BILL_FNAME, String BILL_EMAIL, String BILL_PHONE, String BILL_COUNTRYCODE, String BILL_CITYPE, String BILL_CINUMBER, String CC_NUMBER, String EXP_MONTH, String EXP_YEAR, String CC_CVV, String CC_OWNER, String CC_TOKEN, String oRDERPINFO0, String oRDERVER0, BigDecimal SELECTED_INSTALLMENTS_NUMBER, String CARD_PROGRAM_NAME, String ORDER_TIMEOUT, String USE_LOYALTY_POINTS, String LOYALTY_POINTS_AMOUNT, String CAMPAIGN_TYPE, String ORDER_SHIPPING, String POS_CODE, String BILL_FAX, String BILL_ADDRESS, String bILLADDRESS2, String BILL_ZIPCODE, String BILL_CITY, String BILL_STATE, String DELIVERY_LNAME, String DELIVERY_FNAME, String DELIVERY_EMAIL, String DELIVERY_PHONE, String DELIVERY_COMPANY, String DELIVERY_ADDRESS, String dELIVERYADDRESS2, String DELIVERY_ZIPCODE, String DELIVERY_CITY, String DELIVERY_STATE, String DELIVERY_COUNTRYCODE, String LU_ENABLE_TOKEN, String LU_TOKEN_TYPE, String CC_NUMBER_TIME, String CC_OWNER_TIME, String CLIENT_IP, String CLIENT_TIME, String oRDERPNAME0, String oRDERPCODE0, BigDecimal oRDERPRICE0, BigDecimal oRDERVAT0, String oRDERPRICETYPE0, Integer oRDERQTY0, String PRICES_CURRENCY, String oRDERPNAME1, String oRDERPCODE1, BigDecimal oRDERPRICE1, BigDecimal oRDERVAT1, String oRDERPRICETYPE1, Integer oRDERQTY1, String oRDERPNAME2, String oRDERPCODE2, BigDecimal oRDERPRICE2, BigDecimal oRDERVAT2, String oRDERPRICETYPE2, Integer oRDERQTY2, String oRDERPNAME3, String oRDERPCODE3, BigDecimal oRDERPRICE3, BigDecimal oRDERVAT3, String oRDERPRICETYPE3, Integer oRDERQTY3, String oRDERPNAME4, String oRDERPCODE4, BigDecimal oRDERPRICE4, BigDecimal oRDERVAT4, String oRDERPRICETYPE4, Integer oRDERQTY4, String oRDERPNAME5, String oRDERPCODE5, BigDecimal oRDERPRICE5, BigDecimal oRDERVAT5, String oRDERPRICETYPE5, Integer oRDERQTY5) throws ApiException {
+        com.squareup.okhttp.Call call = createOrderCall(MERCHANT, ORDER_REF, ORDER_DATE, PAY_METHOD, BACK_REF, ORDER_HASH, BILL_LNAME, BILL_FNAME, BILL_EMAIL, BILL_PHONE, BILL_COUNTRYCODE, BILL_CITYPE, BILL_CINUMBER, CC_NUMBER, EXP_MONTH, EXP_YEAR, CC_CVV, CC_OWNER, CC_TOKEN, oRDERPINFO0, oRDERVER0, SELECTED_INSTALLMENTS_NUMBER, CARD_PROGRAM_NAME, ORDER_TIMEOUT, USE_LOYALTY_POINTS, LOYALTY_POINTS_AMOUNT, CAMPAIGN_TYPE, ORDER_SHIPPING, POS_CODE, BILL_FAX, BILL_ADDRESS, bILLADDRESS2, BILL_ZIPCODE, BILL_CITY, BILL_STATE, DELIVERY_LNAME, DELIVERY_FNAME, DELIVERY_EMAIL, DELIVERY_PHONE, DELIVERY_COMPANY, DELIVERY_ADDRESS, dELIVERYADDRESS2, DELIVERY_ZIPCODE, DELIVERY_CITY, DELIVERY_STATE, DELIVERY_COUNTRYCODE, LU_ENABLE_TOKEN, LU_TOKEN_TYPE, CC_NUMBER_TIME, CC_OWNER_TIME, CLIENT_IP, CLIENT_TIME, oRDERPNAME0, oRDERPCODE0, oRDERPRICE0, oRDERVAT0, oRDERPRICETYPE0, oRDERQTY0, PRICES_CURRENCY, oRDERPNAME1, oRDERPCODE1, oRDERPRICE1, oRDERVAT1, oRDERPRICETYPE1, oRDERQTY1, oRDERPNAME2, oRDERPCODE2, oRDERPRICE2, oRDERVAT2, oRDERPRICETYPE2, oRDERQTY2, oRDERPNAME3, oRDERPCODE3, oRDERPRICE3, oRDERVAT3, oRDERPRICETYPE3, oRDERQTY3, oRDERPNAME4, oRDERPCODE4, oRDERPRICE4, oRDERVAT4, oRDERPRICETYPE4, oRDERQTY4, oRDERPNAME5, oRDERPCODE5, oRDERPRICE5, oRDERVAT5, oRDERPRICETYPE5, oRDERQTY5, null, null);
         Type localVarReturnType = new TypeToken<AluResponseRaw>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -620,6 +620,9 @@ public class DefaultApi {
      * @param MERCHANT The Merchant&#39;s ID, available in Control Panel  (Account Management / Account Settings)  (required)
      * @param ORDER_REF Order external reference number in Merchant&#39;s system  (required)
      * @param ORDER_DATE The date when the order is initiated in the system,  in YYYY-MM-DD HH:MM:SS format (e.g.: \&quot;2012-05-01 21:15:45\&quot;) Important: Date should be UTC standard +/-10 minutes  (required)
+     * @param PAY_METHOD Payment method for the order. Possible values: CCVISAMC -  Visa/Mastercard credit card (default), WIRE, UPT, BKM, QIWI,  PAYU_CREDIT, QBANK, COMPAY, TINKOFF_LOAN  (optional, default to CCVISAMC)
+     * @param BACK_REF Return URL on the Merchant webshop side that will be used in case  of 3DS enrolled cards authorizations or for Pay By Link (PBL)  payment methods (such as BKM, QIWI, PayU Credit, QBank, Compay, Tinkoff Loan).              (optional)
+     * @param ORDER_HASH HMAC_MD5 signature applied on all parameters from the request. Source string for HMAC_MD5 will be calculated by adding  the length of each field value at the beginning of field value.   A common key shared between PayU and the merchant is used  for the signature. Find more details on how is HASH generated here.  (optional)
      * @param BILL_LNAME Shopper&#39;s last name  (required)
      * @param BILL_FNAME Shopper&#39;s first name  (required)
      * @param BILL_EMAIL Email address of the Shopper (required)
@@ -627,24 +630,6 @@ public class DefaultApi {
      * @param BILL_COUNTRYCODE Shopper&#39;s country code in two letters, ISO format  (required)
      * @param BILL_CITYPE Shopper&#39;s ID type - mandatory for UPT. Accepted values:  * PERSONALID (identity card),  * PASSPORT (passport),  * DRVLICENSE (driving license)  (required)
      * @param BILL_CINUMBER Shopper&#39;s ID number (for the specified ID type)    (required)
-     * @param BILL_ADDRESS Shopper&#39;s address.  (required)
-     * @param BILL_ZIPCODE Address zip code.  (required)
-     * @param BILL_CITY City.  (required)
-     * @param DELIVERY_LNAME Last name of the person where the order will be delivered  (required)
-     * @param DELIVERY_FNAME First name of the person where the order will be delivered  (required)
-     * @param DELIVERY_PHONE The phone of the person of company where the order will be delivered.  (required)
-     * @param DELIVERY_ADDRESS Order delivery address.  (required)
-     * @param DELIVERY_ZIPCODE Order delivery address zip code.  (required)
-     * @param DELIVERY_CITY Order delivery city.  (required)
-     * @param DELIVERY_STATE Order delivery state.  (required)
-     * @param DELIVERY_COUNTRYCODE Delivery country code in two letters ISO format.  (required)
-     * @param oRDERPNAME0 Product name (required)
-     * @param oRDERPCODE0 Product code. If multiple products are sent (in the same or subsequent transactions) with the same product code, PayU will update the product with  the corresponding ORDER_PCODE[] (overwriting all the other product information - name, price, taxes).  (required)
-     * @param oRDERPRICE0 Unit price for product. Default currency is set by PRICES_CURRENCY, described below. (required)
-     * @param oRDERQTY0 Product quantity (required)
-     * @param PAY_METHOD Payment method for the order. Possible values: CCVISAMC -  Visa/Mastercard credit card (default), WIRE, UPT, BKM, QIWI,  PAYU_CREDIT, QBANK, COMPAY, TINKOFF_LOAN  (optional, default to CCVISAMC)
-     * @param BACK_REF Return URL on the Merchant webshop side that will be used in case  of 3DS enrolled cards authorizations or for Pay By Link (PBL)  payment methods (such as BKM, QIWI, PayU Credit, QBank, Compay, Tinkoff Loan).              (optional)
-     * @param ORDER_HASH HMAC_MD5 signature applied on all parameters from the request. Source string for HMAC_MD5 will be calculated by adding  the length of each field value at the beginning of field value.   A common key shared between PayU and the merchant is used  for the signature. Find more details on how is HASH generated here.  (optional)
      * @param CC_NUMBER The card number on which the order authorization will be made.  (optional)
      * @param EXP_MONTH The month in which the card used expires  (optional)
      * @param EXP_YEAR The year in which the card used expires  (optional)
@@ -662,19 +647,34 @@ public class DefaultApi {
      * @param ORDER_SHIPPING A positive number indicating the price of shipping.  The currency is set by PRICES_CURRENCY.  (optional)
      * @param POS_CODE Optional field used to define orders made through a specific POS.  Sent value should be previously confirmed with operation team.  (optional)
      * @param BILL_FAX Shopper&#39;s fax number.  (optional)
+     * @param BILL_ADDRESS Shopper&#39;s address.  (required)
      * @param bILLADDRESS2 Shopper&#39;s address (second line).  (optional)
+     * @param BILL_ZIPCODE Address zip code.  (required)
+     * @param BILL_CITY City.  (required)
      * @param BILL_STATE State / Dept.  (optional)
+     * @param DELIVERY_LNAME Last name of the person where the order will be delivered  (required)
+     * @param DELIVERY_FNAME First name of the person where the order will be delivered  (required)
      * @param DELIVERY_EMAIL Email address of the person or company where the order will be delivered  (optional)
+     * @param DELIVERY_PHONE The phone of the person of company where the order will be delivered.  (required)
      * @param DELIVERY_COMPANY Company name where the order will be delivered.  (optional)
+     * @param DELIVERY_ADDRESS Order delivery address.  (required)
      * @param dELIVERYADDRESS2 More details on order delivery address.  (optional)
+     * @param DELIVERY_ZIPCODE Order delivery address zip code.  (required)
+     * @param DELIVERY_CITY Order delivery city.  (required)
+     * @param DELIVERY_STATE Order delivery state.  (required)
+     * @param DELIVERY_COUNTRYCODE Delivery country code in two letters ISO format.  (required)
      * @param LU_ENABLE_TOKEN Enable Token payments for the order. For the initial transaction, we have this parameter set to 1  (optional)
      * @param LU_TOKEN_TYPE The type of the token. For the initial transaction, we have this parameter set to PAY_BY_CLICK  (optional)
      * @param CC_NUMBER_TIME Time spent by user to insert card number  (optional)
      * @param CC_OWNER_TIME Time spent by user to insert card owner  (optional)
      * @param CLIENT_IP IP address of the Shopper  (optional)
      * @param CLIENT_TIME Time collected from the Shopper&#39;s browser in YYYY-MM-DD hh:mm;ss format  (optional)
+     * @param oRDERPNAME0 Product name (required)
+     * @param oRDERPCODE0 Product code. If multiple products are sent (in the same or subsequent transactions) with the same product code, PayU will update the product with  the corresponding ORDER_PCODE[] (overwriting all the other product information - name, price, taxes).  (required)
+     * @param oRDERPRICE0 Unit price for product. Default currency is set by PRICES_CURRENCY, described below. (required)
      * @param oRDERVAT0 VAT value for product (optional)
      * @param oRDERPRICETYPE0 Specify if ORDER_PRICE[0] parameter includes VAT or not.  * GROSS (VAT is included)  * NET (VAT will be added by PayU)  (optional, default to NET)
+     * @param oRDERQTY0 Product quantity (required)
      * @param PRICES_CURRENCY The currency in which the prices are expressed, for example TRY If the parameter is not specified, the default value is the default currency of the Merchant.  (optional)
      * @param oRDERPNAME1 Product #2  (optional)
      * @param oRDERPCODE1 Product #2  (optional)
@@ -710,7 +710,7 @@ public class DefaultApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call orderAluV3PostAsync(String MERCHANT, String ORDER_REF, DateTime ORDER_DATE, String BILL_LNAME, String BILL_FNAME, String BILL_EMAIL, String BILL_PHONE, String BILL_COUNTRYCODE, String BILL_CITYPE, String BILL_CINUMBER, String BILL_ADDRESS, String BILL_ZIPCODE, String BILL_CITY, String DELIVERY_LNAME, String DELIVERY_FNAME, String DELIVERY_PHONE, String DELIVERY_ADDRESS, String DELIVERY_ZIPCODE, String DELIVERY_CITY, String DELIVERY_STATE, String DELIVERY_COUNTRYCODE, String oRDERPNAME0, String oRDERPCODE0, BigDecimal oRDERPRICE0, Integer oRDERQTY0, String PAY_METHOD, String BACK_REF, String ORDER_HASH, String CC_NUMBER, String EXP_MONTH, String EXP_YEAR, String CC_CVV, String CC_OWNER, String CC_TOKEN, String oRDERPINFO0, String oRDERVER0, BigDecimal SELECTED_INSTALLMENTS_NUMBER, String CARD_PROGRAM_NAME, String ORDER_TIMEOUT, String USE_LOYALTY_POINTS, String LOYALTY_POINTS_AMOUNT, String CAMPAIGN_TYPE, String ORDER_SHIPPING, String POS_CODE, String BILL_FAX, String bILLADDRESS2, String BILL_STATE, String DELIVERY_EMAIL, String DELIVERY_COMPANY, String dELIVERYADDRESS2, String LU_ENABLE_TOKEN, String LU_TOKEN_TYPE, String CC_NUMBER_TIME, String CC_OWNER_TIME, String CLIENT_IP, String CLIENT_TIME, BigDecimal oRDERVAT0, String oRDERPRICETYPE0, String PRICES_CURRENCY, String oRDERPNAME1, String oRDERPCODE1, BigDecimal oRDERPRICE1, BigDecimal oRDERVAT1, String oRDERPRICETYPE1, Integer oRDERQTY1, String oRDERPNAME2, String oRDERPCODE2, BigDecimal oRDERPRICE2, BigDecimal oRDERVAT2, String oRDERPRICETYPE2, Integer oRDERQTY2, String oRDERPNAME3, String oRDERPCODE3, BigDecimal oRDERPRICE3, BigDecimal oRDERVAT3, String oRDERPRICETYPE3, Integer oRDERQTY3, String oRDERPNAME4, String oRDERPCODE4, BigDecimal oRDERPRICE4, BigDecimal oRDERVAT4, String oRDERPRICETYPE4, Integer oRDERQTY4, String oRDERPNAME5, String oRDERPCODE5, BigDecimal oRDERPRICE5, BigDecimal oRDERVAT5, String oRDERPRICETYPE5, Integer oRDERQTY5, final ApiCallback<AluResponseRaw> callback) throws ApiException {
+    public com.squareup.okhttp.Call createOrderAsync(String MERCHANT, String ORDER_REF, OffsetDateTime ORDER_DATE, String PAY_METHOD, String BACK_REF, String ORDER_HASH, String BILL_LNAME, String BILL_FNAME, String BILL_EMAIL, String BILL_PHONE, String BILL_COUNTRYCODE, String BILL_CITYPE, String BILL_CINUMBER, String CC_NUMBER, String EXP_MONTH, String EXP_YEAR, String CC_CVV, String CC_OWNER, String CC_TOKEN, String oRDERPINFO0, String oRDERVER0, BigDecimal SELECTED_INSTALLMENTS_NUMBER, String CARD_PROGRAM_NAME, String ORDER_TIMEOUT, String USE_LOYALTY_POINTS, String LOYALTY_POINTS_AMOUNT, String CAMPAIGN_TYPE, String ORDER_SHIPPING, String POS_CODE, String BILL_FAX, String BILL_ADDRESS, String bILLADDRESS2, String BILL_ZIPCODE, String BILL_CITY, String BILL_STATE, String DELIVERY_LNAME, String DELIVERY_FNAME, String DELIVERY_EMAIL, String DELIVERY_PHONE, String DELIVERY_COMPANY, String DELIVERY_ADDRESS, String dELIVERYADDRESS2, String DELIVERY_ZIPCODE, String DELIVERY_CITY, String DELIVERY_STATE, String DELIVERY_COUNTRYCODE, String LU_ENABLE_TOKEN, String LU_TOKEN_TYPE, String CC_NUMBER_TIME, String CC_OWNER_TIME, String CLIENT_IP, String CLIENT_TIME, String oRDERPNAME0, String oRDERPCODE0, BigDecimal oRDERPRICE0, BigDecimal oRDERVAT0, String oRDERPRICETYPE0, Integer oRDERQTY0, String PRICES_CURRENCY, String oRDERPNAME1, String oRDERPCODE1, BigDecimal oRDERPRICE1, BigDecimal oRDERVAT1, String oRDERPRICETYPE1, Integer oRDERQTY1, String oRDERPNAME2, String oRDERPCODE2, BigDecimal oRDERPRICE2, BigDecimal oRDERVAT2, String oRDERPRICETYPE2, Integer oRDERQTY2, String oRDERPNAME3, String oRDERPCODE3, BigDecimal oRDERPRICE3, BigDecimal oRDERVAT3, String oRDERPRICETYPE3, Integer oRDERQTY3, String oRDERPNAME4, String oRDERPCODE4, BigDecimal oRDERPRICE4, BigDecimal oRDERVAT4, String oRDERPRICETYPE4, Integer oRDERQTY4, String oRDERPNAME5, String oRDERPCODE5, BigDecimal oRDERPRICE5, BigDecimal oRDERVAT5, String oRDERPRICETYPE5, Integer oRDERQTY5, final ApiCallback<AluResponseRaw> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -731,7 +731,7 @@ public class DefaultApi {
             };
         }
 
-        com.squareup.okhttp.Call call = orderAluV3PostCall(MERCHANT, ORDER_REF, ORDER_DATE, BILL_LNAME, BILL_FNAME, BILL_EMAIL, BILL_PHONE, BILL_COUNTRYCODE, BILL_CITYPE, BILL_CINUMBER, BILL_ADDRESS, BILL_ZIPCODE, BILL_CITY, DELIVERY_LNAME, DELIVERY_FNAME, DELIVERY_PHONE, DELIVERY_ADDRESS, DELIVERY_ZIPCODE, DELIVERY_CITY, DELIVERY_STATE, DELIVERY_COUNTRYCODE, oRDERPNAME0, oRDERPCODE0, oRDERPRICE0, oRDERQTY0, PAY_METHOD, BACK_REF, ORDER_HASH, CC_NUMBER, EXP_MONTH, EXP_YEAR, CC_CVV, CC_OWNER, CC_TOKEN, oRDERPINFO0, oRDERVER0, SELECTED_INSTALLMENTS_NUMBER, CARD_PROGRAM_NAME, ORDER_TIMEOUT, USE_LOYALTY_POINTS, LOYALTY_POINTS_AMOUNT, CAMPAIGN_TYPE, ORDER_SHIPPING, POS_CODE, BILL_FAX, bILLADDRESS2, BILL_STATE, DELIVERY_EMAIL, DELIVERY_COMPANY, dELIVERYADDRESS2, LU_ENABLE_TOKEN, LU_TOKEN_TYPE, CC_NUMBER_TIME, CC_OWNER_TIME, CLIENT_IP, CLIENT_TIME, oRDERVAT0, oRDERPRICETYPE0, PRICES_CURRENCY, oRDERPNAME1, oRDERPCODE1, oRDERPRICE1, oRDERVAT1, oRDERPRICETYPE1, oRDERQTY1, oRDERPNAME2, oRDERPCODE2, oRDERPRICE2, oRDERVAT2, oRDERPRICETYPE2, oRDERQTY2, oRDERPNAME3, oRDERPCODE3, oRDERPRICE3, oRDERVAT3, oRDERPRICETYPE3, oRDERQTY3, oRDERPNAME4, oRDERPCODE4, oRDERPRICE4, oRDERVAT4, oRDERPRICETYPE4, oRDERQTY4, oRDERPNAME5, oRDERPCODE5, oRDERPRICE5, oRDERVAT5, oRDERPRICETYPE5, oRDERQTY5, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = createOrderCall(MERCHANT, ORDER_REF, ORDER_DATE, PAY_METHOD, BACK_REF, ORDER_HASH, BILL_LNAME, BILL_FNAME, BILL_EMAIL, BILL_PHONE, BILL_COUNTRYCODE, BILL_CITYPE, BILL_CINUMBER, CC_NUMBER, EXP_MONTH, EXP_YEAR, CC_CVV, CC_OWNER, CC_TOKEN, oRDERPINFO0, oRDERVER0, SELECTED_INSTALLMENTS_NUMBER, CARD_PROGRAM_NAME, ORDER_TIMEOUT, USE_LOYALTY_POINTS, LOYALTY_POINTS_AMOUNT, CAMPAIGN_TYPE, ORDER_SHIPPING, POS_CODE, BILL_FAX, BILL_ADDRESS, bILLADDRESS2, BILL_ZIPCODE, BILL_CITY, BILL_STATE, DELIVERY_LNAME, DELIVERY_FNAME, DELIVERY_EMAIL, DELIVERY_PHONE, DELIVERY_COMPANY, DELIVERY_ADDRESS, dELIVERYADDRESS2, DELIVERY_ZIPCODE, DELIVERY_CITY, DELIVERY_STATE, DELIVERY_COUNTRYCODE, LU_ENABLE_TOKEN, LU_TOKEN_TYPE, CC_NUMBER_TIME, CC_OWNER_TIME, CLIENT_IP, CLIENT_TIME, oRDERPNAME0, oRDERPCODE0, oRDERPRICE0, oRDERVAT0, oRDERPRICETYPE0, oRDERQTY0, PRICES_CURRENCY, oRDERPNAME1, oRDERPCODE1, oRDERPRICE1, oRDERVAT1, oRDERPRICETYPE1, oRDERQTY1, oRDERPNAME2, oRDERPCODE2, oRDERPRICE2, oRDERVAT2, oRDERPRICETYPE2, oRDERQTY2, oRDERPNAME3, oRDERPCODE3, oRDERPRICE3, oRDERVAT3, oRDERPRICETYPE3, oRDERQTY3, oRDERPNAME4, oRDERPCODE4, oRDERPRICE4, oRDERVAT4, oRDERPRICETYPE4, oRDERQTY4, oRDERPNAME5, oRDERPCODE5, oRDERPRICE5, oRDERVAT5, oRDERPRICETYPE5, oRDERQTY5, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<AluResponseRaw>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

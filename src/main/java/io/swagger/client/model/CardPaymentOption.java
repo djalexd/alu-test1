@@ -1,4 +1,4 @@
-/*
+/**
  * Gecad ePayment API
  * Move your app forward with the Uber API
  *
@@ -30,12 +30,13 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+
 /**
  * Pay with credit card
  */
 @ApiModel(description = "Pay with credit card")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-20T17:53:39.583+02:00")
-public class CardPaymentOption {
+
+public class CardPaymentOption   {
   @SerializedName("ccNumber")
   private String ccNumber = null;
 
@@ -256,6 +257,5 @@ public class CardPaymentOption {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
 

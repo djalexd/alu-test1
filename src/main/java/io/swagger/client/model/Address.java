@@ -1,4 +1,4 @@
-/*
+/**
  * Gecad ePayment API
  * Move your app forward with the Uber API
  *
@@ -30,12 +30,13 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+
 /**
  * Describes a generic address object
  */
 @ApiModel(description = "Describes a generic address object")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-20T17:53:39.583+02:00")
-public class Address {
+
+public class Address   {
   @SerializedName("addressLine1")
   private String addressLine1 = null;
 
@@ -210,6 +211,5 @@ public class Address {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
 

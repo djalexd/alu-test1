@@ -1,4 +1,4 @@
-/*
+/**
  * Gecad ePayment API
  * Move your app forward with the Uber API
  *
@@ -30,11 +30,12 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
+
 /**
  * WireAccountRaw
  */
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-20T17:53:39.583+02:00")
-public class WireAccountRaw {
+
+public class WireAccountRaw   {
   @SerializedName("BANK_IDENTIFIER")
   private String BANK_IDENTIFIER = null;
 
@@ -255,6 +256,5 @@ public class WireAccountRaw {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
 

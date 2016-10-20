@@ -74,7 +74,7 @@ public final class AluV3API {
 	public AluResponse createOrder(final AluRequest request) throws ApiException {
 		validateRequest(request);
 
-		final AluResponseRaw raw = api.orderAluV3Post(
+		final AluResponseRaw raw = api.createOrder(
 				resolve(()->request.getMerchant().getKey()).orElseThrow(ApiException::new),
 				resolve(request::getOrderRef).orElseThrow(ApiException::new),
 				resolve(request::getOrderDate).orElseThrow(ApiException::new),

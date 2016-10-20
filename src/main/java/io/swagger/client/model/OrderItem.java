@@ -1,4 +1,4 @@
-/*
+/**
  * Gecad ePayment API
  * Move your app forward with the Uber API
  *
@@ -31,12 +31,13 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
 
+
 /**
  * An item belonging to ALU request
  */
 @ApiModel(description = "An item belonging to ALU request")
-@javax.annotation.Generated(value = "class io.swagger.codegen.languages.JavaClientCodegen", date = "2016-10-20T17:53:39.583+02:00")
-public class OrderItem {
+
+public class OrderItem   {
   @SerializedName("name")
   private String name = null;
 
@@ -281,6 +282,5 @@ public class OrderItem {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
 }
 
