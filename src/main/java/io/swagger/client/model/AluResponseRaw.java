@@ -30,9 +30,9 @@ import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.client.model.WireAccountRaw;
-import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import org.joda.time.DateTime;
 
 
 /**
@@ -139,7 +139,7 @@ public class AluResponseRaw   {
   private String RETURN_MESSAGE = null;
 
   @SerializedName("DATE")
-  private OffsetDateTime DATE = null;
+  private DateTime DATE = null;
 
   @SerializedName("URL_3DS")
   private String uRL3DS = null;
@@ -270,7 +270,7 @@ public class AluResponseRaw   {
     this.RETURN_MESSAGE = RETURN_MESSAGE;
   }
 
-  public AluResponseRaw DATE(OffsetDateTime DATE) {
+  public AluResponseRaw DATE(DateTime DATE) {
     this.DATE = DATE;
     return this;
   }
@@ -280,11 +280,11 @@ public class AluResponseRaw   {
    * @return DATE
   **/
   @ApiModelProperty(example = "null", value = "Date of the response in UTC format")
-  public OffsetDateTime getDATE() {
+  public DateTime getDATE() {
     return DATE;
   }
 
-  public void setDATE(OffsetDateTime DATE) {
+  public void setDATE(DateTime DATE) {
     this.DATE = DATE;
   }
 

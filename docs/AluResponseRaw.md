@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **STATUS** | [**STATUSEnum**](#STATUSEnum) | Possible values  * SUCCESS - If the payment was authorized. In this case also REFNO is returned (see response sample)  * FAILED - If the payment could NOT be authorized for various reasons (fraud, insufficient funds etc.). In this case a REFNO is returned, but the payment is Pending (see response sample)  * INPUT_ERROR - If the payment request has erroneous or missing required parameters (see response sample)  |  [optional]
 **RETURN_CODE** | [**RETURNCODEEnum**](#RETURNCODEEnum) |  |  [optional]
 **RETURN_MESSAGE** | **String** | A more detailed description of the response code |  [optional]
-**DATE** | [**OffsetDateTime**](OffsetDateTime.md) | Date of the response in UTC format |  [optional]
+**DATE** | [**DateTime**](DateTime.md) | Date of the response in UTC format |  [optional]
 **uRL3DS** | **String** | In case that the credit card is enrolled in 3D Secure system, this parameter will contain an URL where the Merchant should redirect the browser of the Shopper (see response sample). |  [optional]
 **AMOUNT** | **String** | Total transacted amount |  [optional]
 **CURRENCY** | **String** | The currency in which the order has been processed |  [optional]

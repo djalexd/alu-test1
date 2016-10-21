@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **merchant** | [**Merchant**](Merchant.md) |  |  [optional]
 **orderRef** | **String** | Order external reference number in Merchant&#39;s system  |  [optional]
-**orderDate** | [**OffsetDateTime**](OffsetDateTime.md) | The date when the order is initiated in the system,  in YYYY-MM-DD HH:MM:SS format (e.g.: \&quot;2012-05-01 21:15:45\&quot;) Important: Date should be UTC standard +/-10 minutes  |  [optional]
+**orderDate** | [**DateTime**](DateTime.md) | The date when the order is initiated in the system,  in YYYY-MM-DD HH:MM:SS format (e.g.: \&quot;2012-05-01 21:15:45\&quot;) Important: Date should be UTC standard +/-10 minutes  |  [optional]
 **orderTimeout** | **Integer** | The time in seconds after which the order will expire.  |  [optional]
 **clientIp** | **String** | ip address of the shopper |  [optional]
 **clientTime** | **String** | Time collected from the Shopper&#39;s browser in YYYY-MM-DD hh:mm;ss format  |  [optional]

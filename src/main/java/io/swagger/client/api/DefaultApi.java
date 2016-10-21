@@ -38,9 +38,9 @@ import com.google.gson.reflect.TypeToken;
 
 import java.io.IOException;
 
-import java.time.OffsetDateTime;
 import io.swagger.client.model.Error;
 import io.swagger.client.model.AluResponseRaw;
+import org.joda.time.DateTime;
 import java.math.BigDecimal;
 
 import java.lang.reflect.Type;
@@ -69,7 +69,7 @@ public class DefaultApi {
     }
 
     /* Build call for createOrder */
-    private com.squareup.okhttp.Call createOrderCall(String MERCHANT, String ORDER_REF, OffsetDateTime ORDER_DATE, String PAY_METHOD, String BACK_REF, String ORDER_HASH, String BILL_LNAME, String BILL_FNAME, String BILL_EMAIL, String BILL_PHONE, String BILL_COUNTRYCODE, String BILL_CITYPE, String BILL_CINUMBER, String CC_NUMBER, String EXP_MONTH, String EXP_YEAR, String CC_CVV, String CC_OWNER, String CC_TOKEN, String oRDERPINFO0, String oRDERVER0, BigDecimal SELECTED_INSTALLMENTS_NUMBER, String CARD_PROGRAM_NAME, String ORDER_TIMEOUT, String USE_LOYALTY_POINTS, String LOYALTY_POINTS_AMOUNT, String CAMPAIGN_TYPE, String ORDER_SHIPPING, String POS_CODE, String BILL_FAX, String BILL_ADDRESS, String bILLADDRESS2, String BILL_ZIPCODE, String BILL_CITY, String BILL_STATE, String DELIVERY_LNAME, String DELIVERY_FNAME, String DELIVERY_EMAIL, String DELIVERY_PHONE, String DELIVERY_COMPANY, String DELIVERY_ADDRESS, String dELIVERYADDRESS2, String DELIVERY_ZIPCODE, String DELIVERY_CITY, String DELIVERY_STATE, String DELIVERY_COUNTRYCODE, String LU_ENABLE_TOKEN, String LU_TOKEN_TYPE, String CC_NUMBER_TIME, String CC_OWNER_TIME, String CLIENT_IP, String CLIENT_TIME, String oRDERPNAME0, String oRDERPCODE0, BigDecimal oRDERPRICE0, BigDecimal oRDERVAT0, String oRDERPRICETYPE0, Integer oRDERQTY0, String PRICES_CURRENCY, String oRDERPNAME1, String oRDERPCODE1, BigDecimal oRDERPRICE1, BigDecimal oRDERVAT1, String oRDERPRICETYPE1, Integer oRDERQTY1, String oRDERPNAME2, String oRDERPCODE2, BigDecimal oRDERPRICE2, BigDecimal oRDERVAT2, String oRDERPRICETYPE2, Integer oRDERQTY2, String oRDERPNAME3, String oRDERPCODE3, BigDecimal oRDERPRICE3, BigDecimal oRDERVAT3, String oRDERPRICETYPE3, Integer oRDERQTY3, String oRDERPNAME4, String oRDERPCODE4, BigDecimal oRDERPRICE4, BigDecimal oRDERVAT4, String oRDERPRICETYPE4, Integer oRDERQTY4, String oRDERPNAME5, String oRDERPCODE5, BigDecimal oRDERPRICE5, BigDecimal oRDERVAT5, String oRDERPRICETYPE5, Integer oRDERQTY5, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
+    private com.squareup.okhttp.Call createOrderCall(String MERCHANT, String ORDER_REF, DateTime ORDER_DATE, String PAY_METHOD, String BACK_REF, String ORDER_HASH, String BILL_LNAME, String BILL_FNAME, String BILL_EMAIL, String BILL_PHONE, String BILL_COUNTRYCODE, String BILL_CITYPE, String BILL_CINUMBER, String CC_NUMBER, String EXP_MONTH, String EXP_YEAR, String CC_CVV, String CC_OWNER, String CC_TOKEN, Integer SELECTED_INSTALLMENTS_NUMBER, String CARD_PROGRAM_NAME, Integer ORDER_TIMEOUT, String USE_LOYALTY_POINTS, BigDecimal LOYALTY_POINTS_AMOUNT, String CAMPAIGN_TYPE, BigDecimal ORDER_SHIPPING, String POS_CODE, String BILL_FAX, String BILL_ADDRESS, String bILLADDRESS2, String BILL_ZIPCODE, String BILL_CITY, String BILL_STATE, String DELIVERY_LNAME, String DELIVERY_FNAME, String DELIVERY_EMAIL, String DELIVERY_PHONE, String DELIVERY_COMPANY, String DELIVERY_ADDRESS, String dELIVERYADDRESS2, String DELIVERY_ZIPCODE, String DELIVERY_CITY, String DELIVERY_STATE, String DELIVERY_COUNTRYCODE, String LU_ENABLE_TOKEN, String LU_TOKEN_TYPE, String CC_NUMBER_TIME, String CC_OWNER_TIME, String CLIENT_IP, String CLIENT_TIME, String PRICES_CURRENCY, String oRDERPNAME0, String oRDERPCODE0, BigDecimal oRDERPRICE0, BigDecimal oRDERVAT0, String oRDERPRICETYPE0, Integer oRDERQTY0, String oRDERPINFO0, String oRDERVER0, String oRDERPNAME1, String oRDERPCODE1, BigDecimal oRDERPRICE1, BigDecimal oRDERVAT1, String oRDERPRICETYPE1, Integer oRDERQTY1, String oRDERPINFO1, String oRDERVER1, String oRDERPNAME2, String oRDERPCODE2, BigDecimal oRDERPRICE2, BigDecimal oRDERVAT2, String oRDERPRICETYPE2, Integer oRDERQTY2, String oRDERPINFO2, String oRDERVER2, String oRDERPNAME3, String oRDERPCODE3, BigDecimal oRDERPRICE3, BigDecimal oRDERVAT3, String oRDERPRICETYPE3, Integer oRDERQTY3, String oRDERPINFO3, String oRDERVER4, String oRDERPNAME4, String oRDERPCODE4, BigDecimal oRDERPRICE4, BigDecimal oRDERVAT4, String oRDERPRICETYPE4, Integer oRDERQTY4, String oRDERPINFO4, String oRDERVER5, String oRDERPNAME5, String oRDERPCODE5, BigDecimal oRDERPRICE5, BigDecimal oRDERVAT5, String oRDERPRICETYPE5, Integer oRDERQTY5, String oRDERPINFO5, String oRDERVER6, final ProgressResponseBody.ProgressListener progressListener, final ProgressRequestBody.ProgressRequestListener progressRequestListener) throws ApiException {
         Object localVarPostBody = null;
         
         // verify the required parameter 'MERCHANT' is set
@@ -244,10 +244,6 @@ public class DefaultApi {
         localVarFormParams.put("CC_OWNER", CC_OWNER);
         if (CC_TOKEN != null)
         localVarFormParams.put("CC_TOKEN", CC_TOKEN);
-        if (oRDERPINFO0 != null)
-        localVarFormParams.put("ORDER_PINFO[0]", oRDERPINFO0);
-        if (oRDERVER0 != null)
-        localVarFormParams.put("ORDER_VER[0]", oRDERVER0);
         if (SELECTED_INSTALLMENTS_NUMBER != null)
         localVarFormParams.put("SELECTED_INSTALLMENTS_NUMBER", SELECTED_INSTALLMENTS_NUMBER);
         if (CARD_PROGRAM_NAME != null)
@@ -310,6 +306,8 @@ public class DefaultApi {
         localVarFormParams.put("CLIENT_IP", CLIENT_IP);
         if (CLIENT_TIME != null)
         localVarFormParams.put("CLIENT_TIME", CLIENT_TIME);
+        if (PRICES_CURRENCY != null)
+        localVarFormParams.put("PRICES_CURRENCY", PRICES_CURRENCY);
         if (oRDERPNAME0 != null)
         localVarFormParams.put("ORDER_PNAME[0]", oRDERPNAME0);
         if (oRDERPCODE0 != null)
@@ -322,8 +320,10 @@ public class DefaultApi {
         localVarFormParams.put("ORDER_PRICE_TYPE[0]", oRDERPRICETYPE0);
         if (oRDERQTY0 != null)
         localVarFormParams.put("ORDER_QTY[0]", oRDERQTY0);
-        if (PRICES_CURRENCY != null)
-        localVarFormParams.put("PRICES_CURRENCY", PRICES_CURRENCY);
+        if (oRDERPINFO0 != null)
+        localVarFormParams.put("ORDER_PINFO[0]", oRDERPINFO0);
+        if (oRDERVER0 != null)
+        localVarFormParams.put("ORDER_VER[0]", oRDERVER0);
         if (oRDERPNAME1 != null)
         localVarFormParams.put("ORDER_PNAME[1]", oRDERPNAME1);
         if (oRDERPCODE1 != null)
@@ -336,6 +336,10 @@ public class DefaultApi {
         localVarFormParams.put("ORDER_PRICE_TYPE[1]", oRDERPRICETYPE1);
         if (oRDERQTY1 != null)
         localVarFormParams.put("ORDER_QTY[1]", oRDERQTY1);
+        if (oRDERPINFO1 != null)
+        localVarFormParams.put("ORDER_PINFO[1]", oRDERPINFO1);
+        if (oRDERVER1 != null)
+        localVarFormParams.put("ORDER_VER[1]", oRDERVER1);
         if (oRDERPNAME2 != null)
         localVarFormParams.put("ORDER_PNAME[2]", oRDERPNAME2);
         if (oRDERPCODE2 != null)
@@ -348,6 +352,10 @@ public class DefaultApi {
         localVarFormParams.put("ORDER_PRICE_TYPE[2]", oRDERPRICETYPE2);
         if (oRDERQTY2 != null)
         localVarFormParams.put("ORDER_QTY[2]", oRDERQTY2);
+        if (oRDERPINFO2 != null)
+        localVarFormParams.put("ORDER_PINFO[2]", oRDERPINFO2);
+        if (oRDERVER2 != null)
+        localVarFormParams.put("ORDER_VER[2]", oRDERVER2);
         if (oRDERPNAME3 != null)
         localVarFormParams.put("ORDER_PNAME[3]", oRDERPNAME3);
         if (oRDERPCODE3 != null)
@@ -360,6 +368,10 @@ public class DefaultApi {
         localVarFormParams.put("ORDER_PRICE_TYPE[3]", oRDERPRICETYPE3);
         if (oRDERQTY3 != null)
         localVarFormParams.put("ORDER_QTY[3]", oRDERQTY3);
+        if (oRDERPINFO3 != null)
+        localVarFormParams.put("ORDER_PINFO[3]", oRDERPINFO3);
+        if (oRDERVER4 != null)
+        localVarFormParams.put("ORDER_VER[4]", oRDERVER4);
         if (oRDERPNAME4 != null)
         localVarFormParams.put("ORDER_PNAME[4]", oRDERPNAME4);
         if (oRDERPCODE4 != null)
@@ -372,6 +384,10 @@ public class DefaultApi {
         localVarFormParams.put("ORDER_PRICE_TYPE[4]", oRDERPRICETYPE4);
         if (oRDERQTY4 != null)
         localVarFormParams.put("ORDER_QTY[4]", oRDERQTY4);
+        if (oRDERPINFO4 != null)
+        localVarFormParams.put("ORDER_PINFO[4]", oRDERPINFO4);
+        if (oRDERVER5 != null)
+        localVarFormParams.put("ORDER_VER[4]", oRDERVER5);
         if (oRDERPNAME5 != null)
         localVarFormParams.put("ORDER_PNAME[5]", oRDERPNAME5);
         if (oRDERPCODE5 != null)
@@ -384,6 +400,10 @@ public class DefaultApi {
         localVarFormParams.put("ORDER_PRICE_TYPE[5]", oRDERPRICETYPE5);
         if (oRDERQTY5 != null)
         localVarFormParams.put("ORDER_QTY[5]", oRDERQTY5);
+        if (oRDERPINFO5 != null)
+        localVarFormParams.put("ORDER_PINFO[5]", oRDERPINFO5);
+        if (oRDERVER6 != null)
+        localVarFormParams.put("ORDER_VER[5]", oRDERVER6);
 
         final String[] localVarAccepts = {
             "application/xml"
@@ -435,8 +455,6 @@ public class DefaultApi {
      * @param CC_CVV The CCV/CVV2 code for the card. For some card types or based on merchant settings  this can be empty, otherwise it should have a numerical value.  (optional)
      * @param CC_OWNER The card owner name, as it appears on the card.  (optional)
      * @param CC_TOKEN The token provided by Modal Checkout.  (optional)
-     * @param oRDERPINFO0 First item in the so-called array of additional product info (optional)
-     * @param oRDERVER0 First item in the so-called array of product version for all ordered products (optional)
      * @param SELECTED_INSTALLMENTS_NUMBER The number of installments. It can be an integer between 1 and 12.  (optional)
      * @param CARD_PROGRAM_NAME The name of card program that allows paying an order using installments.  (optional)
      * @param ORDER_TIMEOUT The time in seconds after which the order will expire.  (optional)
@@ -468,48 +486,60 @@ public class DefaultApi {
      * @param CC_OWNER_TIME Time spent by user to insert card owner  (optional)
      * @param CLIENT_IP IP address of the Shopper  (optional)
      * @param CLIENT_TIME Time collected from the Shopper&#39;s browser in YYYY-MM-DD hh:mm;ss format  (optional)
+     * @param PRICES_CURRENCY The currency in which the prices are expressed, for example TRY If the parameter is not specified, the default value is the default currency of the Merchant.  (optional)
      * @param oRDERPNAME0 Product name (required)
      * @param oRDERPCODE0 Product code. If multiple products are sent (in the same or subsequent transactions) with the same product code, PayU will update the product with  the corresponding ORDER_PCODE[] (overwriting all the other product information - name, price, taxes).  (required)
      * @param oRDERPRICE0 Unit price for product. Default currency is set by PRICES_CURRENCY, described below. (required)
      * @param oRDERVAT0 VAT value for product (optional)
      * @param oRDERPRICETYPE0 Specify if ORDER_PRICE[0] parameter includes VAT or not.  * GROSS (VAT is included)  * NET (VAT will be added by PayU)  (optional, default to NET)
      * @param oRDERQTY0 Product quantity (required)
-     * @param PRICES_CURRENCY The currency in which the prices are expressed, for example TRY If the parameter is not specified, the default value is the default currency of the Merchant.  (optional)
+     * @param oRDERPINFO0 Product additional information  (optional)
+     * @param oRDERVER0 Product ... version?  (optional)
      * @param oRDERPNAME1 Product #2  (optional)
      * @param oRDERPCODE1 Product #2  (optional)
      * @param oRDERPRICE1 Product #2  (optional)
      * @param oRDERVAT1 Product #2  (optional)
      * @param oRDERPRICETYPE1 Product #2  (optional, default to NET)
      * @param oRDERQTY1 Product #2  (optional)
+     * @param oRDERPINFO1 Product #2  (optional)
+     * @param oRDERVER1 Product #2  (optional)
      * @param oRDERPNAME2 Product #3  (optional)
      * @param oRDERPCODE2 Product #3  (optional)
      * @param oRDERPRICE2 Product #3  (optional)
      * @param oRDERVAT2 Product #3  (optional)
      * @param oRDERPRICETYPE2 Product #3  (optional, default to NET)
      * @param oRDERQTY2 Product #3  (optional)
+     * @param oRDERPINFO2 Product #3  (optional)
+     * @param oRDERVER2 Product #3  (optional)
      * @param oRDERPNAME3 Product #4  (optional)
      * @param oRDERPCODE3 Product #4  (optional)
      * @param oRDERPRICE3 Product #4  (optional)
      * @param oRDERVAT3 Product #4  (optional)
      * @param oRDERPRICETYPE3 Product #4  (optional, default to NET)
      * @param oRDERQTY3 Product #4  (optional)
+     * @param oRDERPINFO3 Product #4  (optional)
+     * @param oRDERVER4 Product #4  (optional)
      * @param oRDERPNAME4 Product #5  (optional)
      * @param oRDERPCODE4 Product #5  (optional)
      * @param oRDERPRICE4 Product #5  (optional)
      * @param oRDERVAT4 Product #5  (optional)
      * @param oRDERPRICETYPE4 Product #5  (optional, default to NET)
      * @param oRDERQTY4 Product #5  (optional)
+     * @param oRDERPINFO4 Product #5  (optional)
+     * @param oRDERVER5 Product #5  (optional)
      * @param oRDERPNAME5 Product #6  (optional)
      * @param oRDERPCODE5 Product #6  (optional)
      * @param oRDERPRICE5 Product #6  (optional)
      * @param oRDERVAT5 Product #6  (optional)
      * @param oRDERPRICETYPE5 Product #6  (optional, default to NET)
      * @param oRDERQTY5 Product #6  (optional)
+     * @param oRDERPINFO5 Product #6  (optional)
+     * @param oRDERVER6 Product #6  (optional)
      * @return AluResponseRaw
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public AluResponseRaw createOrder(String MERCHANT, String ORDER_REF, OffsetDateTime ORDER_DATE, String PAY_METHOD, String BACK_REF, String ORDER_HASH, String BILL_LNAME, String BILL_FNAME, String BILL_EMAIL, String BILL_PHONE, String BILL_COUNTRYCODE, String BILL_CITYPE, String BILL_CINUMBER, String CC_NUMBER, String EXP_MONTH, String EXP_YEAR, String CC_CVV, String CC_OWNER, String CC_TOKEN, String oRDERPINFO0, String oRDERVER0, BigDecimal SELECTED_INSTALLMENTS_NUMBER, String CARD_PROGRAM_NAME, String ORDER_TIMEOUT, String USE_LOYALTY_POINTS, String LOYALTY_POINTS_AMOUNT, String CAMPAIGN_TYPE, String ORDER_SHIPPING, String POS_CODE, String BILL_FAX, String BILL_ADDRESS, String bILLADDRESS2, String BILL_ZIPCODE, String BILL_CITY, String BILL_STATE, String DELIVERY_LNAME, String DELIVERY_FNAME, String DELIVERY_EMAIL, String DELIVERY_PHONE, String DELIVERY_COMPANY, String DELIVERY_ADDRESS, String dELIVERYADDRESS2, String DELIVERY_ZIPCODE, String DELIVERY_CITY, String DELIVERY_STATE, String DELIVERY_COUNTRYCODE, String LU_ENABLE_TOKEN, String LU_TOKEN_TYPE, String CC_NUMBER_TIME, String CC_OWNER_TIME, String CLIENT_IP, String CLIENT_TIME, String oRDERPNAME0, String oRDERPCODE0, BigDecimal oRDERPRICE0, BigDecimal oRDERVAT0, String oRDERPRICETYPE0, Integer oRDERQTY0, String PRICES_CURRENCY, String oRDERPNAME1, String oRDERPCODE1, BigDecimal oRDERPRICE1, BigDecimal oRDERVAT1, String oRDERPRICETYPE1, Integer oRDERQTY1, String oRDERPNAME2, String oRDERPCODE2, BigDecimal oRDERPRICE2, BigDecimal oRDERVAT2, String oRDERPRICETYPE2, Integer oRDERQTY2, String oRDERPNAME3, String oRDERPCODE3, BigDecimal oRDERPRICE3, BigDecimal oRDERVAT3, String oRDERPRICETYPE3, Integer oRDERQTY3, String oRDERPNAME4, String oRDERPCODE4, BigDecimal oRDERPRICE4, BigDecimal oRDERVAT4, String oRDERPRICETYPE4, Integer oRDERQTY4, String oRDERPNAME5, String oRDERPCODE5, BigDecimal oRDERPRICE5, BigDecimal oRDERVAT5, String oRDERPRICETYPE5, Integer oRDERQTY5) throws ApiException {
-        ApiResponse<AluResponseRaw> resp = createOrderWithHttpInfo(MERCHANT, ORDER_REF, ORDER_DATE, PAY_METHOD, BACK_REF, ORDER_HASH, BILL_LNAME, BILL_FNAME, BILL_EMAIL, BILL_PHONE, BILL_COUNTRYCODE, BILL_CITYPE, BILL_CINUMBER, CC_NUMBER, EXP_MONTH, EXP_YEAR, CC_CVV, CC_OWNER, CC_TOKEN, oRDERPINFO0, oRDERVER0, SELECTED_INSTALLMENTS_NUMBER, CARD_PROGRAM_NAME, ORDER_TIMEOUT, USE_LOYALTY_POINTS, LOYALTY_POINTS_AMOUNT, CAMPAIGN_TYPE, ORDER_SHIPPING, POS_CODE, BILL_FAX, BILL_ADDRESS, bILLADDRESS2, BILL_ZIPCODE, BILL_CITY, BILL_STATE, DELIVERY_LNAME, DELIVERY_FNAME, DELIVERY_EMAIL, DELIVERY_PHONE, DELIVERY_COMPANY, DELIVERY_ADDRESS, dELIVERYADDRESS2, DELIVERY_ZIPCODE, DELIVERY_CITY, DELIVERY_STATE, DELIVERY_COUNTRYCODE, LU_ENABLE_TOKEN, LU_TOKEN_TYPE, CC_NUMBER_TIME, CC_OWNER_TIME, CLIENT_IP, CLIENT_TIME, oRDERPNAME0, oRDERPCODE0, oRDERPRICE0, oRDERVAT0, oRDERPRICETYPE0, oRDERQTY0, PRICES_CURRENCY, oRDERPNAME1, oRDERPCODE1, oRDERPRICE1, oRDERVAT1, oRDERPRICETYPE1, oRDERQTY1, oRDERPNAME2, oRDERPCODE2, oRDERPRICE2, oRDERVAT2, oRDERPRICETYPE2, oRDERQTY2, oRDERPNAME3, oRDERPCODE3, oRDERPRICE3, oRDERVAT3, oRDERPRICETYPE3, oRDERQTY3, oRDERPNAME4, oRDERPCODE4, oRDERPRICE4, oRDERVAT4, oRDERPRICETYPE4, oRDERQTY4, oRDERPNAME5, oRDERPCODE5, oRDERPRICE5, oRDERVAT5, oRDERPRICETYPE5, oRDERQTY5);
+    public AluResponseRaw createOrder(String MERCHANT, String ORDER_REF, DateTime ORDER_DATE, String PAY_METHOD, String BACK_REF, String ORDER_HASH, String BILL_LNAME, String BILL_FNAME, String BILL_EMAIL, String BILL_PHONE, String BILL_COUNTRYCODE, String BILL_CITYPE, String BILL_CINUMBER, String CC_NUMBER, String EXP_MONTH, String EXP_YEAR, String CC_CVV, String CC_OWNER, String CC_TOKEN, Integer SELECTED_INSTALLMENTS_NUMBER, String CARD_PROGRAM_NAME, Integer ORDER_TIMEOUT, String USE_LOYALTY_POINTS, BigDecimal LOYALTY_POINTS_AMOUNT, String CAMPAIGN_TYPE, BigDecimal ORDER_SHIPPING, String POS_CODE, String BILL_FAX, String BILL_ADDRESS, String bILLADDRESS2, String BILL_ZIPCODE, String BILL_CITY, String BILL_STATE, String DELIVERY_LNAME, String DELIVERY_FNAME, String DELIVERY_EMAIL, String DELIVERY_PHONE, String DELIVERY_COMPANY, String DELIVERY_ADDRESS, String dELIVERYADDRESS2, String DELIVERY_ZIPCODE, String DELIVERY_CITY, String DELIVERY_STATE, String DELIVERY_COUNTRYCODE, String LU_ENABLE_TOKEN, String LU_TOKEN_TYPE, String CC_NUMBER_TIME, String CC_OWNER_TIME, String CLIENT_IP, String CLIENT_TIME, String PRICES_CURRENCY, String oRDERPNAME0, String oRDERPCODE0, BigDecimal oRDERPRICE0, BigDecimal oRDERVAT0, String oRDERPRICETYPE0, Integer oRDERQTY0, String oRDERPINFO0, String oRDERVER0, String oRDERPNAME1, String oRDERPCODE1, BigDecimal oRDERPRICE1, BigDecimal oRDERVAT1, String oRDERPRICETYPE1, Integer oRDERQTY1, String oRDERPINFO1, String oRDERVER1, String oRDERPNAME2, String oRDERPCODE2, BigDecimal oRDERPRICE2, BigDecimal oRDERVAT2, String oRDERPRICETYPE2, Integer oRDERQTY2, String oRDERPINFO2, String oRDERVER2, String oRDERPNAME3, String oRDERPCODE3, BigDecimal oRDERPRICE3, BigDecimal oRDERVAT3, String oRDERPRICETYPE3, Integer oRDERQTY3, String oRDERPINFO3, String oRDERVER4, String oRDERPNAME4, String oRDERPCODE4, BigDecimal oRDERPRICE4, BigDecimal oRDERVAT4, String oRDERPRICETYPE4, Integer oRDERQTY4, String oRDERPINFO4, String oRDERVER5, String oRDERPNAME5, String oRDERPCODE5, BigDecimal oRDERPRICE5, BigDecimal oRDERVAT5, String oRDERPRICETYPE5, Integer oRDERQTY5, String oRDERPINFO5, String oRDERVER6) throws ApiException {
+        ApiResponse<AluResponseRaw> resp = createOrderWithHttpInfo(MERCHANT, ORDER_REF, ORDER_DATE, PAY_METHOD, BACK_REF, ORDER_HASH, BILL_LNAME, BILL_FNAME, BILL_EMAIL, BILL_PHONE, BILL_COUNTRYCODE, BILL_CITYPE, BILL_CINUMBER, CC_NUMBER, EXP_MONTH, EXP_YEAR, CC_CVV, CC_OWNER, CC_TOKEN, SELECTED_INSTALLMENTS_NUMBER, CARD_PROGRAM_NAME, ORDER_TIMEOUT, USE_LOYALTY_POINTS, LOYALTY_POINTS_AMOUNT, CAMPAIGN_TYPE, ORDER_SHIPPING, POS_CODE, BILL_FAX, BILL_ADDRESS, bILLADDRESS2, BILL_ZIPCODE, BILL_CITY, BILL_STATE, DELIVERY_LNAME, DELIVERY_FNAME, DELIVERY_EMAIL, DELIVERY_PHONE, DELIVERY_COMPANY, DELIVERY_ADDRESS, dELIVERYADDRESS2, DELIVERY_ZIPCODE, DELIVERY_CITY, DELIVERY_STATE, DELIVERY_COUNTRYCODE, LU_ENABLE_TOKEN, LU_TOKEN_TYPE, CC_NUMBER_TIME, CC_OWNER_TIME, CLIENT_IP, CLIENT_TIME, PRICES_CURRENCY, oRDERPNAME0, oRDERPCODE0, oRDERPRICE0, oRDERVAT0, oRDERPRICETYPE0, oRDERQTY0, oRDERPINFO0, oRDERVER0, oRDERPNAME1, oRDERPCODE1, oRDERPRICE1, oRDERVAT1, oRDERPRICETYPE1, oRDERQTY1, oRDERPINFO1, oRDERVER1, oRDERPNAME2, oRDERPCODE2, oRDERPRICE2, oRDERVAT2, oRDERPRICETYPE2, oRDERQTY2, oRDERPINFO2, oRDERVER2, oRDERPNAME3, oRDERPCODE3, oRDERPRICE3, oRDERVAT3, oRDERPRICETYPE3, oRDERQTY3, oRDERPINFO3, oRDERVER4, oRDERPNAME4, oRDERPCODE4, oRDERPRICE4, oRDERVAT4, oRDERPRICETYPE4, oRDERQTY4, oRDERPINFO4, oRDERVER5, oRDERPNAME5, oRDERPCODE5, oRDERPRICE5, oRDERVAT5, oRDERPRICETYPE5, oRDERQTY5, oRDERPINFO5, oRDERVER6);
         return resp.getData();
     }
 
@@ -535,8 +565,6 @@ public class DefaultApi {
      * @param CC_CVV The CCV/CVV2 code for the card. For some card types or based on merchant settings  this can be empty, otherwise it should have a numerical value.  (optional)
      * @param CC_OWNER The card owner name, as it appears on the card.  (optional)
      * @param CC_TOKEN The token provided by Modal Checkout.  (optional)
-     * @param oRDERPINFO0 First item in the so-called array of additional product info (optional)
-     * @param oRDERVER0 First item in the so-called array of product version for all ordered products (optional)
      * @param SELECTED_INSTALLMENTS_NUMBER The number of installments. It can be an integer between 1 and 12.  (optional)
      * @param CARD_PROGRAM_NAME The name of card program that allows paying an order using installments.  (optional)
      * @param ORDER_TIMEOUT The time in seconds after which the order will expire.  (optional)
@@ -568,48 +596,60 @@ public class DefaultApi {
      * @param CC_OWNER_TIME Time spent by user to insert card owner  (optional)
      * @param CLIENT_IP IP address of the Shopper  (optional)
      * @param CLIENT_TIME Time collected from the Shopper&#39;s browser in YYYY-MM-DD hh:mm;ss format  (optional)
+     * @param PRICES_CURRENCY The currency in which the prices are expressed, for example TRY If the parameter is not specified, the default value is the default currency of the Merchant.  (optional)
      * @param oRDERPNAME0 Product name (required)
      * @param oRDERPCODE0 Product code. If multiple products are sent (in the same or subsequent transactions) with the same product code, PayU will update the product with  the corresponding ORDER_PCODE[] (overwriting all the other product information - name, price, taxes).  (required)
      * @param oRDERPRICE0 Unit price for product. Default currency is set by PRICES_CURRENCY, described below. (required)
      * @param oRDERVAT0 VAT value for product (optional)
      * @param oRDERPRICETYPE0 Specify if ORDER_PRICE[0] parameter includes VAT or not.  * GROSS (VAT is included)  * NET (VAT will be added by PayU)  (optional, default to NET)
      * @param oRDERQTY0 Product quantity (required)
-     * @param PRICES_CURRENCY The currency in which the prices are expressed, for example TRY If the parameter is not specified, the default value is the default currency of the Merchant.  (optional)
+     * @param oRDERPINFO0 Product additional information  (optional)
+     * @param oRDERVER0 Product ... version?  (optional)
      * @param oRDERPNAME1 Product #2  (optional)
      * @param oRDERPCODE1 Product #2  (optional)
      * @param oRDERPRICE1 Product #2  (optional)
      * @param oRDERVAT1 Product #2  (optional)
      * @param oRDERPRICETYPE1 Product #2  (optional, default to NET)
      * @param oRDERQTY1 Product #2  (optional)
+     * @param oRDERPINFO1 Product #2  (optional)
+     * @param oRDERVER1 Product #2  (optional)
      * @param oRDERPNAME2 Product #3  (optional)
      * @param oRDERPCODE2 Product #3  (optional)
      * @param oRDERPRICE2 Product #3  (optional)
      * @param oRDERVAT2 Product #3  (optional)
      * @param oRDERPRICETYPE2 Product #3  (optional, default to NET)
      * @param oRDERQTY2 Product #3  (optional)
+     * @param oRDERPINFO2 Product #3  (optional)
+     * @param oRDERVER2 Product #3  (optional)
      * @param oRDERPNAME3 Product #4  (optional)
      * @param oRDERPCODE3 Product #4  (optional)
      * @param oRDERPRICE3 Product #4  (optional)
      * @param oRDERVAT3 Product #4  (optional)
      * @param oRDERPRICETYPE3 Product #4  (optional, default to NET)
      * @param oRDERQTY3 Product #4  (optional)
+     * @param oRDERPINFO3 Product #4  (optional)
+     * @param oRDERVER4 Product #4  (optional)
      * @param oRDERPNAME4 Product #5  (optional)
      * @param oRDERPCODE4 Product #5  (optional)
      * @param oRDERPRICE4 Product #5  (optional)
      * @param oRDERVAT4 Product #5  (optional)
      * @param oRDERPRICETYPE4 Product #5  (optional, default to NET)
      * @param oRDERQTY4 Product #5  (optional)
+     * @param oRDERPINFO4 Product #5  (optional)
+     * @param oRDERVER5 Product #5  (optional)
      * @param oRDERPNAME5 Product #6  (optional)
      * @param oRDERPCODE5 Product #6  (optional)
      * @param oRDERPRICE5 Product #6  (optional)
      * @param oRDERVAT5 Product #6  (optional)
      * @param oRDERPRICETYPE5 Product #6  (optional, default to NET)
      * @param oRDERQTY5 Product #6  (optional)
+     * @param oRDERPINFO5 Product #6  (optional)
+     * @param oRDERVER6 Product #6  (optional)
      * @return ApiResponse&lt;AluResponseRaw&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<AluResponseRaw> createOrderWithHttpInfo(String MERCHANT, String ORDER_REF, OffsetDateTime ORDER_DATE, String PAY_METHOD, String BACK_REF, String ORDER_HASH, String BILL_LNAME, String BILL_FNAME, String BILL_EMAIL, String BILL_PHONE, String BILL_COUNTRYCODE, String BILL_CITYPE, String BILL_CINUMBER, String CC_NUMBER, String EXP_MONTH, String EXP_YEAR, String CC_CVV, String CC_OWNER, String CC_TOKEN, String oRDERPINFO0, String oRDERVER0, BigDecimal SELECTED_INSTALLMENTS_NUMBER, String CARD_PROGRAM_NAME, String ORDER_TIMEOUT, String USE_LOYALTY_POINTS, String LOYALTY_POINTS_AMOUNT, String CAMPAIGN_TYPE, String ORDER_SHIPPING, String POS_CODE, String BILL_FAX, String BILL_ADDRESS, String bILLADDRESS2, String BILL_ZIPCODE, String BILL_CITY, String BILL_STATE, String DELIVERY_LNAME, String DELIVERY_FNAME, String DELIVERY_EMAIL, String DELIVERY_PHONE, String DELIVERY_COMPANY, String DELIVERY_ADDRESS, String dELIVERYADDRESS2, String DELIVERY_ZIPCODE, String DELIVERY_CITY, String DELIVERY_STATE, String DELIVERY_COUNTRYCODE, String LU_ENABLE_TOKEN, String LU_TOKEN_TYPE, String CC_NUMBER_TIME, String CC_OWNER_TIME, String CLIENT_IP, String CLIENT_TIME, String oRDERPNAME0, String oRDERPCODE0, BigDecimal oRDERPRICE0, BigDecimal oRDERVAT0, String oRDERPRICETYPE0, Integer oRDERQTY0, String PRICES_CURRENCY, String oRDERPNAME1, String oRDERPCODE1, BigDecimal oRDERPRICE1, BigDecimal oRDERVAT1, String oRDERPRICETYPE1, Integer oRDERQTY1, String oRDERPNAME2, String oRDERPCODE2, BigDecimal oRDERPRICE2, BigDecimal oRDERVAT2, String oRDERPRICETYPE2, Integer oRDERQTY2, String oRDERPNAME3, String oRDERPCODE3, BigDecimal oRDERPRICE3, BigDecimal oRDERVAT3, String oRDERPRICETYPE3, Integer oRDERQTY3, String oRDERPNAME4, String oRDERPCODE4, BigDecimal oRDERPRICE4, BigDecimal oRDERVAT4, String oRDERPRICETYPE4, Integer oRDERQTY4, String oRDERPNAME5, String oRDERPCODE5, BigDecimal oRDERPRICE5, BigDecimal oRDERVAT5, String oRDERPRICETYPE5, Integer oRDERQTY5) throws ApiException {
-        com.squareup.okhttp.Call call = createOrderCall(MERCHANT, ORDER_REF, ORDER_DATE, PAY_METHOD, BACK_REF, ORDER_HASH, BILL_LNAME, BILL_FNAME, BILL_EMAIL, BILL_PHONE, BILL_COUNTRYCODE, BILL_CITYPE, BILL_CINUMBER, CC_NUMBER, EXP_MONTH, EXP_YEAR, CC_CVV, CC_OWNER, CC_TOKEN, oRDERPINFO0, oRDERVER0, SELECTED_INSTALLMENTS_NUMBER, CARD_PROGRAM_NAME, ORDER_TIMEOUT, USE_LOYALTY_POINTS, LOYALTY_POINTS_AMOUNT, CAMPAIGN_TYPE, ORDER_SHIPPING, POS_CODE, BILL_FAX, BILL_ADDRESS, bILLADDRESS2, BILL_ZIPCODE, BILL_CITY, BILL_STATE, DELIVERY_LNAME, DELIVERY_FNAME, DELIVERY_EMAIL, DELIVERY_PHONE, DELIVERY_COMPANY, DELIVERY_ADDRESS, dELIVERYADDRESS2, DELIVERY_ZIPCODE, DELIVERY_CITY, DELIVERY_STATE, DELIVERY_COUNTRYCODE, LU_ENABLE_TOKEN, LU_TOKEN_TYPE, CC_NUMBER_TIME, CC_OWNER_TIME, CLIENT_IP, CLIENT_TIME, oRDERPNAME0, oRDERPCODE0, oRDERPRICE0, oRDERVAT0, oRDERPRICETYPE0, oRDERQTY0, PRICES_CURRENCY, oRDERPNAME1, oRDERPCODE1, oRDERPRICE1, oRDERVAT1, oRDERPRICETYPE1, oRDERQTY1, oRDERPNAME2, oRDERPCODE2, oRDERPRICE2, oRDERVAT2, oRDERPRICETYPE2, oRDERQTY2, oRDERPNAME3, oRDERPCODE3, oRDERPRICE3, oRDERVAT3, oRDERPRICETYPE3, oRDERQTY3, oRDERPNAME4, oRDERPCODE4, oRDERPRICE4, oRDERVAT4, oRDERPRICETYPE4, oRDERQTY4, oRDERPNAME5, oRDERPCODE5, oRDERPRICE5, oRDERVAT5, oRDERPRICETYPE5, oRDERQTY5, null, null);
+    public ApiResponse<AluResponseRaw> createOrderWithHttpInfo(String MERCHANT, String ORDER_REF, DateTime ORDER_DATE, String PAY_METHOD, String BACK_REF, String ORDER_HASH, String BILL_LNAME, String BILL_FNAME, String BILL_EMAIL, String BILL_PHONE, String BILL_COUNTRYCODE, String BILL_CITYPE, String BILL_CINUMBER, String CC_NUMBER, String EXP_MONTH, String EXP_YEAR, String CC_CVV, String CC_OWNER, String CC_TOKEN, Integer SELECTED_INSTALLMENTS_NUMBER, String CARD_PROGRAM_NAME, Integer ORDER_TIMEOUT, String USE_LOYALTY_POINTS, BigDecimal LOYALTY_POINTS_AMOUNT, String CAMPAIGN_TYPE, BigDecimal ORDER_SHIPPING, String POS_CODE, String BILL_FAX, String BILL_ADDRESS, String bILLADDRESS2, String BILL_ZIPCODE, String BILL_CITY, String BILL_STATE, String DELIVERY_LNAME, String DELIVERY_FNAME, String DELIVERY_EMAIL, String DELIVERY_PHONE, String DELIVERY_COMPANY, String DELIVERY_ADDRESS, String dELIVERYADDRESS2, String DELIVERY_ZIPCODE, String DELIVERY_CITY, String DELIVERY_STATE, String DELIVERY_COUNTRYCODE, String LU_ENABLE_TOKEN, String LU_TOKEN_TYPE, String CC_NUMBER_TIME, String CC_OWNER_TIME, String CLIENT_IP, String CLIENT_TIME, String PRICES_CURRENCY, String oRDERPNAME0, String oRDERPCODE0, BigDecimal oRDERPRICE0, BigDecimal oRDERVAT0, String oRDERPRICETYPE0, Integer oRDERQTY0, String oRDERPINFO0, String oRDERVER0, String oRDERPNAME1, String oRDERPCODE1, BigDecimal oRDERPRICE1, BigDecimal oRDERVAT1, String oRDERPRICETYPE1, Integer oRDERQTY1, String oRDERPINFO1, String oRDERVER1, String oRDERPNAME2, String oRDERPCODE2, BigDecimal oRDERPRICE2, BigDecimal oRDERVAT2, String oRDERPRICETYPE2, Integer oRDERQTY2, String oRDERPINFO2, String oRDERVER2, String oRDERPNAME3, String oRDERPCODE3, BigDecimal oRDERPRICE3, BigDecimal oRDERVAT3, String oRDERPRICETYPE3, Integer oRDERQTY3, String oRDERPINFO3, String oRDERVER4, String oRDERPNAME4, String oRDERPCODE4, BigDecimal oRDERPRICE4, BigDecimal oRDERVAT4, String oRDERPRICETYPE4, Integer oRDERQTY4, String oRDERPINFO4, String oRDERVER5, String oRDERPNAME5, String oRDERPCODE5, BigDecimal oRDERPRICE5, BigDecimal oRDERVAT5, String oRDERPRICETYPE5, Integer oRDERQTY5, String oRDERPINFO5, String oRDERVER6) throws ApiException {
+        com.squareup.okhttp.Call call = createOrderCall(MERCHANT, ORDER_REF, ORDER_DATE, PAY_METHOD, BACK_REF, ORDER_HASH, BILL_LNAME, BILL_FNAME, BILL_EMAIL, BILL_PHONE, BILL_COUNTRYCODE, BILL_CITYPE, BILL_CINUMBER, CC_NUMBER, EXP_MONTH, EXP_YEAR, CC_CVV, CC_OWNER, CC_TOKEN, SELECTED_INSTALLMENTS_NUMBER, CARD_PROGRAM_NAME, ORDER_TIMEOUT, USE_LOYALTY_POINTS, LOYALTY_POINTS_AMOUNT, CAMPAIGN_TYPE, ORDER_SHIPPING, POS_CODE, BILL_FAX, BILL_ADDRESS, bILLADDRESS2, BILL_ZIPCODE, BILL_CITY, BILL_STATE, DELIVERY_LNAME, DELIVERY_FNAME, DELIVERY_EMAIL, DELIVERY_PHONE, DELIVERY_COMPANY, DELIVERY_ADDRESS, dELIVERYADDRESS2, DELIVERY_ZIPCODE, DELIVERY_CITY, DELIVERY_STATE, DELIVERY_COUNTRYCODE, LU_ENABLE_TOKEN, LU_TOKEN_TYPE, CC_NUMBER_TIME, CC_OWNER_TIME, CLIENT_IP, CLIENT_TIME, PRICES_CURRENCY, oRDERPNAME0, oRDERPCODE0, oRDERPRICE0, oRDERVAT0, oRDERPRICETYPE0, oRDERQTY0, oRDERPINFO0, oRDERVER0, oRDERPNAME1, oRDERPCODE1, oRDERPRICE1, oRDERVAT1, oRDERPRICETYPE1, oRDERQTY1, oRDERPINFO1, oRDERVER1, oRDERPNAME2, oRDERPCODE2, oRDERPRICE2, oRDERVAT2, oRDERPRICETYPE2, oRDERQTY2, oRDERPINFO2, oRDERVER2, oRDERPNAME3, oRDERPCODE3, oRDERPRICE3, oRDERVAT3, oRDERPRICETYPE3, oRDERQTY3, oRDERPINFO3, oRDERVER4, oRDERPNAME4, oRDERPCODE4, oRDERPRICE4, oRDERVAT4, oRDERPRICETYPE4, oRDERQTY4, oRDERPINFO4, oRDERVER5, oRDERPNAME5, oRDERPCODE5, oRDERPRICE5, oRDERVAT5, oRDERPRICETYPE5, oRDERQTY5, oRDERPINFO5, oRDERVER6, null, null);
         Type localVarReturnType = new TypeToken<AluResponseRaw>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
@@ -636,8 +676,6 @@ public class DefaultApi {
      * @param CC_CVV The CCV/CVV2 code for the card. For some card types or based on merchant settings  this can be empty, otherwise it should have a numerical value.  (optional)
      * @param CC_OWNER The card owner name, as it appears on the card.  (optional)
      * @param CC_TOKEN The token provided by Modal Checkout.  (optional)
-     * @param oRDERPINFO0 First item in the so-called array of additional product info (optional)
-     * @param oRDERVER0 First item in the so-called array of product version for all ordered products (optional)
      * @param SELECTED_INSTALLMENTS_NUMBER The number of installments. It can be an integer between 1 and 12.  (optional)
      * @param CARD_PROGRAM_NAME The name of card program that allows paying an order using installments.  (optional)
      * @param ORDER_TIMEOUT The time in seconds after which the order will expire.  (optional)
@@ -669,48 +707,60 @@ public class DefaultApi {
      * @param CC_OWNER_TIME Time spent by user to insert card owner  (optional)
      * @param CLIENT_IP IP address of the Shopper  (optional)
      * @param CLIENT_TIME Time collected from the Shopper&#39;s browser in YYYY-MM-DD hh:mm;ss format  (optional)
+     * @param PRICES_CURRENCY The currency in which the prices are expressed, for example TRY If the parameter is not specified, the default value is the default currency of the Merchant.  (optional)
      * @param oRDERPNAME0 Product name (required)
      * @param oRDERPCODE0 Product code. If multiple products are sent (in the same or subsequent transactions) with the same product code, PayU will update the product with  the corresponding ORDER_PCODE[] (overwriting all the other product information - name, price, taxes).  (required)
      * @param oRDERPRICE0 Unit price for product. Default currency is set by PRICES_CURRENCY, described below. (required)
      * @param oRDERVAT0 VAT value for product (optional)
      * @param oRDERPRICETYPE0 Specify if ORDER_PRICE[0] parameter includes VAT or not.  * GROSS (VAT is included)  * NET (VAT will be added by PayU)  (optional, default to NET)
      * @param oRDERQTY0 Product quantity (required)
-     * @param PRICES_CURRENCY The currency in which the prices are expressed, for example TRY If the parameter is not specified, the default value is the default currency of the Merchant.  (optional)
+     * @param oRDERPINFO0 Product additional information  (optional)
+     * @param oRDERVER0 Product ... version?  (optional)
      * @param oRDERPNAME1 Product #2  (optional)
      * @param oRDERPCODE1 Product #2  (optional)
      * @param oRDERPRICE1 Product #2  (optional)
      * @param oRDERVAT1 Product #2  (optional)
      * @param oRDERPRICETYPE1 Product #2  (optional, default to NET)
      * @param oRDERQTY1 Product #2  (optional)
+     * @param oRDERPINFO1 Product #2  (optional)
+     * @param oRDERVER1 Product #2  (optional)
      * @param oRDERPNAME2 Product #3  (optional)
      * @param oRDERPCODE2 Product #3  (optional)
      * @param oRDERPRICE2 Product #3  (optional)
      * @param oRDERVAT2 Product #3  (optional)
      * @param oRDERPRICETYPE2 Product #3  (optional, default to NET)
      * @param oRDERQTY2 Product #3  (optional)
+     * @param oRDERPINFO2 Product #3  (optional)
+     * @param oRDERVER2 Product #3  (optional)
      * @param oRDERPNAME3 Product #4  (optional)
      * @param oRDERPCODE3 Product #4  (optional)
      * @param oRDERPRICE3 Product #4  (optional)
      * @param oRDERVAT3 Product #4  (optional)
      * @param oRDERPRICETYPE3 Product #4  (optional, default to NET)
      * @param oRDERQTY3 Product #4  (optional)
+     * @param oRDERPINFO3 Product #4  (optional)
+     * @param oRDERVER4 Product #4  (optional)
      * @param oRDERPNAME4 Product #5  (optional)
      * @param oRDERPCODE4 Product #5  (optional)
      * @param oRDERPRICE4 Product #5  (optional)
      * @param oRDERVAT4 Product #5  (optional)
      * @param oRDERPRICETYPE4 Product #5  (optional, default to NET)
      * @param oRDERQTY4 Product #5  (optional)
+     * @param oRDERPINFO4 Product #5  (optional)
+     * @param oRDERVER5 Product #5  (optional)
      * @param oRDERPNAME5 Product #6  (optional)
      * @param oRDERPCODE5 Product #6  (optional)
      * @param oRDERPRICE5 Product #6  (optional)
      * @param oRDERVAT5 Product #6  (optional)
      * @param oRDERPRICETYPE5 Product #6  (optional, default to NET)
      * @param oRDERQTY5 Product #6  (optional)
+     * @param oRDERPINFO5 Product #6  (optional)
+     * @param oRDERVER6 Product #6  (optional)
      * @param callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call createOrderAsync(String MERCHANT, String ORDER_REF, OffsetDateTime ORDER_DATE, String PAY_METHOD, String BACK_REF, String ORDER_HASH, String BILL_LNAME, String BILL_FNAME, String BILL_EMAIL, String BILL_PHONE, String BILL_COUNTRYCODE, String BILL_CITYPE, String BILL_CINUMBER, String CC_NUMBER, String EXP_MONTH, String EXP_YEAR, String CC_CVV, String CC_OWNER, String CC_TOKEN, String oRDERPINFO0, String oRDERVER0, BigDecimal SELECTED_INSTALLMENTS_NUMBER, String CARD_PROGRAM_NAME, String ORDER_TIMEOUT, String USE_LOYALTY_POINTS, String LOYALTY_POINTS_AMOUNT, String CAMPAIGN_TYPE, String ORDER_SHIPPING, String POS_CODE, String BILL_FAX, String BILL_ADDRESS, String bILLADDRESS2, String BILL_ZIPCODE, String BILL_CITY, String BILL_STATE, String DELIVERY_LNAME, String DELIVERY_FNAME, String DELIVERY_EMAIL, String DELIVERY_PHONE, String DELIVERY_COMPANY, String DELIVERY_ADDRESS, String dELIVERYADDRESS2, String DELIVERY_ZIPCODE, String DELIVERY_CITY, String DELIVERY_STATE, String DELIVERY_COUNTRYCODE, String LU_ENABLE_TOKEN, String LU_TOKEN_TYPE, String CC_NUMBER_TIME, String CC_OWNER_TIME, String CLIENT_IP, String CLIENT_TIME, String oRDERPNAME0, String oRDERPCODE0, BigDecimal oRDERPRICE0, BigDecimal oRDERVAT0, String oRDERPRICETYPE0, Integer oRDERQTY0, String PRICES_CURRENCY, String oRDERPNAME1, String oRDERPCODE1, BigDecimal oRDERPRICE1, BigDecimal oRDERVAT1, String oRDERPRICETYPE1, Integer oRDERQTY1, String oRDERPNAME2, String oRDERPCODE2, BigDecimal oRDERPRICE2, BigDecimal oRDERVAT2, String oRDERPRICETYPE2, Integer oRDERQTY2, String oRDERPNAME3, String oRDERPCODE3, BigDecimal oRDERPRICE3, BigDecimal oRDERVAT3, String oRDERPRICETYPE3, Integer oRDERQTY3, String oRDERPNAME4, String oRDERPCODE4, BigDecimal oRDERPRICE4, BigDecimal oRDERVAT4, String oRDERPRICETYPE4, Integer oRDERQTY4, String oRDERPNAME5, String oRDERPCODE5, BigDecimal oRDERPRICE5, BigDecimal oRDERVAT5, String oRDERPRICETYPE5, Integer oRDERQTY5, final ApiCallback<AluResponseRaw> callback) throws ApiException {
+    public com.squareup.okhttp.Call createOrderAsync(String MERCHANT, String ORDER_REF, DateTime ORDER_DATE, String PAY_METHOD, String BACK_REF, String ORDER_HASH, String BILL_LNAME, String BILL_FNAME, String BILL_EMAIL, String BILL_PHONE, String BILL_COUNTRYCODE, String BILL_CITYPE, String BILL_CINUMBER, String CC_NUMBER, String EXP_MONTH, String EXP_YEAR, String CC_CVV, String CC_OWNER, String CC_TOKEN, Integer SELECTED_INSTALLMENTS_NUMBER, String CARD_PROGRAM_NAME, Integer ORDER_TIMEOUT, String USE_LOYALTY_POINTS, BigDecimal LOYALTY_POINTS_AMOUNT, String CAMPAIGN_TYPE, BigDecimal ORDER_SHIPPING, String POS_CODE, String BILL_FAX, String BILL_ADDRESS, String bILLADDRESS2, String BILL_ZIPCODE, String BILL_CITY, String BILL_STATE, String DELIVERY_LNAME, String DELIVERY_FNAME, String DELIVERY_EMAIL, String DELIVERY_PHONE, String DELIVERY_COMPANY, String DELIVERY_ADDRESS, String dELIVERYADDRESS2, String DELIVERY_ZIPCODE, String DELIVERY_CITY, String DELIVERY_STATE, String DELIVERY_COUNTRYCODE, String LU_ENABLE_TOKEN, String LU_TOKEN_TYPE, String CC_NUMBER_TIME, String CC_OWNER_TIME, String CLIENT_IP, String CLIENT_TIME, String PRICES_CURRENCY, String oRDERPNAME0, String oRDERPCODE0, BigDecimal oRDERPRICE0, BigDecimal oRDERVAT0, String oRDERPRICETYPE0, Integer oRDERQTY0, String oRDERPINFO0, String oRDERVER0, String oRDERPNAME1, String oRDERPCODE1, BigDecimal oRDERPRICE1, BigDecimal oRDERVAT1, String oRDERPRICETYPE1, Integer oRDERQTY1, String oRDERPINFO1, String oRDERVER1, String oRDERPNAME2, String oRDERPCODE2, BigDecimal oRDERPRICE2, BigDecimal oRDERVAT2, String oRDERPRICETYPE2, Integer oRDERQTY2, String oRDERPINFO2, String oRDERVER2, String oRDERPNAME3, String oRDERPCODE3, BigDecimal oRDERPRICE3, BigDecimal oRDERVAT3, String oRDERPRICETYPE3, Integer oRDERQTY3, String oRDERPINFO3, String oRDERVER4, String oRDERPNAME4, String oRDERPCODE4, BigDecimal oRDERPRICE4, BigDecimal oRDERVAT4, String oRDERPRICETYPE4, Integer oRDERQTY4, String oRDERPINFO4, String oRDERVER5, String oRDERPNAME5, String oRDERPCODE5, BigDecimal oRDERPRICE5, BigDecimal oRDERVAT5, String oRDERPRICETYPE5, Integer oRDERQTY5, String oRDERPINFO5, String oRDERVER6, final ApiCallback<AluResponseRaw> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -731,7 +781,7 @@ public class DefaultApi {
             };
         }
 
-        com.squareup.okhttp.Call call = createOrderCall(MERCHANT, ORDER_REF, ORDER_DATE, PAY_METHOD, BACK_REF, ORDER_HASH, BILL_LNAME, BILL_FNAME, BILL_EMAIL, BILL_PHONE, BILL_COUNTRYCODE, BILL_CITYPE, BILL_CINUMBER, CC_NUMBER, EXP_MONTH, EXP_YEAR, CC_CVV, CC_OWNER, CC_TOKEN, oRDERPINFO0, oRDERVER0, SELECTED_INSTALLMENTS_NUMBER, CARD_PROGRAM_NAME, ORDER_TIMEOUT, USE_LOYALTY_POINTS, LOYALTY_POINTS_AMOUNT, CAMPAIGN_TYPE, ORDER_SHIPPING, POS_CODE, BILL_FAX, BILL_ADDRESS, bILLADDRESS2, BILL_ZIPCODE, BILL_CITY, BILL_STATE, DELIVERY_LNAME, DELIVERY_FNAME, DELIVERY_EMAIL, DELIVERY_PHONE, DELIVERY_COMPANY, DELIVERY_ADDRESS, dELIVERYADDRESS2, DELIVERY_ZIPCODE, DELIVERY_CITY, DELIVERY_STATE, DELIVERY_COUNTRYCODE, LU_ENABLE_TOKEN, LU_TOKEN_TYPE, CC_NUMBER_TIME, CC_OWNER_TIME, CLIENT_IP, CLIENT_TIME, oRDERPNAME0, oRDERPCODE0, oRDERPRICE0, oRDERVAT0, oRDERPRICETYPE0, oRDERQTY0, PRICES_CURRENCY, oRDERPNAME1, oRDERPCODE1, oRDERPRICE1, oRDERVAT1, oRDERPRICETYPE1, oRDERQTY1, oRDERPNAME2, oRDERPCODE2, oRDERPRICE2, oRDERVAT2, oRDERPRICETYPE2, oRDERQTY2, oRDERPNAME3, oRDERPCODE3, oRDERPRICE3, oRDERVAT3, oRDERPRICETYPE3, oRDERQTY3, oRDERPNAME4, oRDERPCODE4, oRDERPRICE4, oRDERVAT4, oRDERPRICETYPE4, oRDERQTY4, oRDERPNAME5, oRDERPCODE5, oRDERPRICE5, oRDERVAT5, oRDERPRICETYPE5, oRDERQTY5, progressListener, progressRequestListener);
+        com.squareup.okhttp.Call call = createOrderCall(MERCHANT, ORDER_REF, ORDER_DATE, PAY_METHOD, BACK_REF, ORDER_HASH, BILL_LNAME, BILL_FNAME, BILL_EMAIL, BILL_PHONE, BILL_COUNTRYCODE, BILL_CITYPE, BILL_CINUMBER, CC_NUMBER, EXP_MONTH, EXP_YEAR, CC_CVV, CC_OWNER, CC_TOKEN, SELECTED_INSTALLMENTS_NUMBER, CARD_PROGRAM_NAME, ORDER_TIMEOUT, USE_LOYALTY_POINTS, LOYALTY_POINTS_AMOUNT, CAMPAIGN_TYPE, ORDER_SHIPPING, POS_CODE, BILL_FAX, BILL_ADDRESS, bILLADDRESS2, BILL_ZIPCODE, BILL_CITY, BILL_STATE, DELIVERY_LNAME, DELIVERY_FNAME, DELIVERY_EMAIL, DELIVERY_PHONE, DELIVERY_COMPANY, DELIVERY_ADDRESS, dELIVERYADDRESS2, DELIVERY_ZIPCODE, DELIVERY_CITY, DELIVERY_STATE, DELIVERY_COUNTRYCODE, LU_ENABLE_TOKEN, LU_TOKEN_TYPE, CC_NUMBER_TIME, CC_OWNER_TIME, CLIENT_IP, CLIENT_TIME, PRICES_CURRENCY, oRDERPNAME0, oRDERPCODE0, oRDERPRICE0, oRDERVAT0, oRDERPRICETYPE0, oRDERQTY0, oRDERPINFO0, oRDERVER0, oRDERPNAME1, oRDERPCODE1, oRDERPRICE1, oRDERVAT1, oRDERPRICETYPE1, oRDERQTY1, oRDERPINFO1, oRDERVER1, oRDERPNAME2, oRDERPCODE2, oRDERPRICE2, oRDERVAT2, oRDERPRICETYPE2, oRDERQTY2, oRDERPINFO2, oRDERVER2, oRDERPNAME3, oRDERPCODE3, oRDERPRICE3, oRDERVAT3, oRDERPRICETYPE3, oRDERQTY3, oRDERPINFO3, oRDERVER4, oRDERPNAME4, oRDERPCODE4, oRDERPRICE4, oRDERVAT4, oRDERPRICETYPE4, oRDERQTY4, oRDERPINFO4, oRDERVER5, oRDERPNAME5, oRDERPCODE5, oRDERPRICE5, oRDERVAT5, oRDERPRICETYPE5, oRDERQTY5, oRDERPINFO5, oRDERVER6, progressListener, progressRequestListener);
         Type localVarReturnType = new TypeToken<AluResponseRaw>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;

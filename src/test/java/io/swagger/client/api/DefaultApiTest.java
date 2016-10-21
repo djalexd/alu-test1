@@ -43,7 +43,7 @@ import java.util.Map;
  */
 public class DefaultApiTest {
 
-    private final DefaultApi api = new DefaultApi(new Merchant());
+    private final DefaultApi api = new DefaultApi();
 
     
     /**

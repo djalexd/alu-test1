@@ -35,9 +35,9 @@ import io.swagger.client.model.Delivery;
 import io.swagger.client.model.Merchant;
 import io.swagger.client.model.OrderItem;
 import io.swagger.client.model.Shipping;
-import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import org.joda.time.DateTime;
 
 
 /**
@@ -53,7 +53,7 @@ public class AluRequest   {
   private String orderRef = null;
 
   @SerializedName("orderDate")
-  private OffsetDateTime orderDate = null;
+  private DateTime orderDate = null;
 
   @SerializedName("orderTimeout")
   private Integer orderTimeout = null;
@@ -170,7 +170,7 @@ public class AluRequest   {
     this.orderRef = orderRef;
   }
 
-  public AluRequest orderDate(OffsetDateTime orderDate) {
+  public AluRequest orderDate(DateTime orderDate) {
     this.orderDate = orderDate;
     return this;
   }
@@ -180,11 +180,11 @@ public class AluRequest   {
    * @return orderDate
   **/
   @ApiModelProperty(example = "null", value = "The date when the order is initiated in the system,  in YYYY-MM-DD HH:MM:SS format (e.g.: \"2012-05-01 21:15:45\") Important: Date should be UTC standard +/-10 minutes ")
-  public OffsetDateTime getOrderDate() {
+  public DateTime getOrderDate() {
     return orderDate;
   }
 
-  public void setOrderDate(OffsetDateTime orderDate) {
+  public void setOrderDate(DateTime orderDate) {
     this.orderDate = orderDate;
   }
 
